@@ -1,0 +1,9 @@
+[user]
+    name = Alberto Chamorro
+    email = a.chamorro.ruiz@gmail.com
+[credential]
+    helper = osxkeychain
+[alias]
+    c = commit -m
+    s = status
+    l = log
