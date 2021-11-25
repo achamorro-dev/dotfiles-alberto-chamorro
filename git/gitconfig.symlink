@@ -9,3 +9,6 @@
     l = log
 [init]
     defaultBranch = main
+[pull]
+    rebase = true
+    
