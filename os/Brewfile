@@ -3,6 +3,7 @@ tap 'homebrew/cask-fonts'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'dash'
+brew 'z'
 
 cask 'google-chrome'
 cask 'flutter'
