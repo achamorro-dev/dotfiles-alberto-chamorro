@@ -73,7 +73,6 @@ function set_macos_defaults() {
 
 if test "$(uname)" = "Darwin"
 then
-    blue "Setting MacOS sane defaults"
+    blue "Setting MacOS defaults"
     set_macos_defaults
-    change_caplock_to_control_in_keyboards
 fi
