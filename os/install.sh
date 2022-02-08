@@ -61,14 +61,15 @@ function set_macos_defaults() {
     # 12: Notification Center
     # 13: Lock Screen
     # Top left screen corner → Desktop
+    # tl-modifier 1048576 -> Cmd
     defaults write com.apple.dock wvous-tl-corner -int 4
-    defaults write com.apple.dock wvous-tl-modifier -int 0
+    defaults write com.apple.dock wvous-tl-modifier -int 1048576
     # Top right screen corner → Start screen saver
     defaults write com.apple.dock wvous-tr-corner -int 5
-    defaults write com.apple.dock wvous-tr-modifier -int 0
+    defaults write com.apple.dock wvous-tr-modifier -int 1048576
     # Bottom left screen corner → Lock screen
     defaults write com.apple.dock wvous-bl-corner -int 13
-    defaults write com.apple.dock wvous-bl-modifier -int 0
+    defaults write com.apple.dock wvous-bl-modifier -int 1048576
 }
 
 if test "$(uname)" = "Darwin"
