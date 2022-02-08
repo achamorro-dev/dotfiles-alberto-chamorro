@@ -4,6 +4,8 @@ brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'dash'
 brew 'z'
+brew 'node'
+brew 'nvm'
 
 cask 'google-chrome'
 cask 'flutter'
