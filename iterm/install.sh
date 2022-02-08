@@ -1,7 +1,13 @@
 if test "$(uname)" = "Darwin"
 then
-    # Install the Builtin Tango Dark theme for iTerm
-    open "$HOME/.dotfiles/plugins/dotfiles-alberto-chamorro/iterm/theme/Builtin Tango Dark.itermcolors"
+    if [ -f ~/Library/Preferences/com.googlecode.iterm2.plist ];then
+      TANGO_THEME=$(plutil -extract "Custom Color Presets" xml1 -o - ~/Library/Preferences/com.googlecode.iterm2.plist | grep 'Builtin Tango' | wc -l)
+
+      if [ "${TANGO_THEME}" = "0" ];then
+        # Install the Builtin Tango Dark theme for iTerm
+        open "$HOME/.dotfiles/plugins/dotfiles-alberto-chamorro/iterm/theme/Builtin Tango Dark.itermcolors"
+      fi
+    fi
 
     defaults write com.googlecode.iterm2 PromptOnQuit -bool false
     defaults write com.googlecode.iterm2 SUEnableAutomaticChecks -int 1
