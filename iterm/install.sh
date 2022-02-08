@@ -1,7 +1,7 @@
 if test "$(uname)" = "Darwin"
 then
     # Install the Builtin Tango Dark theme for iTerm
-    open "theme/Builtin Tango Dark.itermcolors"
+    open "$HOME/.dotfiles/plugins/dotfiles-alberto-chamorro/iterm/theme/Builtin Tango Dark.itermcolors"
 
     defaults write com.googlecode.iterm2 PromptOnQuit -bool false
     defaults write com.googlecode.iterm2 SUEnableAutomaticChecks -int 1
