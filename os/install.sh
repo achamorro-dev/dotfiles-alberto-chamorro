@@ -5,6 +5,10 @@ function set_macos_defaults() {
     defaults write NSGlobalDomain KeyRepeat -int 1
     defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
+    # Change keyboard settings
+    # Use F1,F2 keys as standard
+    defaults write -globalDomain com.apple.keyboard.fnState -boolean true
+
     # Change mouse/trackpad settings
     defaults write -globalDomain com.apple.trackpad.enableSecondaryClick -int 1
     defaults write -globalDomain com.apple.trackpad.fiveFingerPinchSwipeGesture -int 2
