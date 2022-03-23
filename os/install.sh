@@ -51,6 +51,10 @@ function set_macos_defaults() {
     # Disable the sound effects on boot
     sudo nvram SystemAudioVolume=" "
 
+    # Hotkeys
+    # Focus to next window
+    #defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{enabled = 1; value = { parameters = (186, 10, 1048576); type = 'standard'; }; }"
+
     # Hot corners
     # Possible values:
     #  0: no-op
@@ -76,8 +80,36 @@ function set_macos_defaults() {
     defaults write com.apple.dock wvous-bl-modifier -int 1048576
 }
 
+#function change_caps_lock_to_control() {
+#    VENDOR_ID=$1
+#    PRODUCT_ID=$2
+#
+#    CAPS_LOCK_KEY_ID=30064771300
+#    CONTROL_KEY_ID=30064771129
+#
+#    blue "Read current configuration of your keyboard"
+#    defaults -currentHost read -g | grep -e "$VENDOR_ID-$PRODUCT_ID"
+#    STATUS=$?
+#    if [[ $STATUS == 0 ]];
+#    then
+#        green "This device is already configured"
+#    else
+#        blue "Change Caps Lock to Control in bluetooth keyboard"
+#        defaults -currentHost write -g com.apple.keyboard.modifiermapping.$VENDOR_ID-$PRODUCT_ID-0 -array-add "<dict><key>HIDKeyboardModifierMappingDst</key><integer>$CAPS_LOCK_KEY_ID</integer><key>HIDKeyboardModifierMappingSrc</key><integer>$CONTROL_KEY_ID</integer></dict>"
+#        red "========================================="
+#        green "Success! This actions required restart"
+#        red "========================================="
+#    fi
+#}
+#
+#function change_caplock_to_control_in_keyboards() {
+#  #KEYBOARD_IO_NAMES=$(ioreg | grep '<class' | grep -i keyboard | awk -F'<class' '{ print $2}' | cut -d',' -f1 | sort -u)
+#
+#}
+
 if test "$(uname)" = "Darwin"
 then
     blue "Setting MacOS defaults"
     set_macos_defaults
+    # change_caplock_to_control_in_keyboards
 fi
