@@ -4,7 +4,7 @@ brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'dash'
 brew 'z'
-brew 'nvm'
+brew 'n' # Node version manager
 brew 'mas'
 
 cask 'google-chrome'
