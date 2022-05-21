@@ -7,6 +7,8 @@ brew 'z'
 brew 'nvm' # Node version manager
 brew 'n' # Node version manager
 brew 'mas'
+brew 'tldr'
+brew 'fzf'
 
 cask 'google-chrome'
 cask 'flutter'
