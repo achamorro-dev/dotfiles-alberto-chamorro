@@ -4,6 +4,7 @@ alias w="cd $HOME/workspace"
 ## COMMANDS
 alias c="clear"
 alias co="code ."
+alias nv="nvim "
 alias ns="npm run serve"
 alias nst="npm run start"
 alias nd="npm run dev"
