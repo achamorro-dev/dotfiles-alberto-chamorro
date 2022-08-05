@@ -9,6 +9,7 @@ brew 'n' # Node version manager
 brew 'mas'
 brew 'tldr'
 brew 'fzf'
+brew 'neovim'
 
 cask 'google-chrome'
 cask 'flutter'
