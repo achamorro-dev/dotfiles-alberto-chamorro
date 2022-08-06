@@ -9,6 +9,7 @@ brew 'mas'
 brew 'tldr'
 brew 'fzf'
 brew 'neovim'
+brew 'ripgrep'
 
 cask 'google-chrome'
 cask 'flutter'
