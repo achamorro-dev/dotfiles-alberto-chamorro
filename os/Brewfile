@@ -5,7 +5,6 @@ brew 'zsh-syntax-highlighting'
 brew 'dash'
 brew 'z'
 brew 'nvm' # Node version manager
-brew 'n' # Node version manager
 brew 'mas'
 brew 'tldr'
 brew 'fzf'
