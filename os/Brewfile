@@ -10,6 +10,7 @@ brew 'tldr'
 brew 'fzf'
 brew 'neovim'
 brew 'ripgrep'
+brew 'lazygit'
 
 cask 'google-chrome'
 cask 'flutter'
