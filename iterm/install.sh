@@ -16,7 +16,7 @@ then
     defaults write com.googlecode.iterm2 SoundForEsc -int 0
     defaults write com.googlecode.iterm2 StatusBarPosition -int 1
     defaults write com.googlecode.iterm2 TabStyleWithAutomaticOption -int 5
-    defaults write com.googlecode.iterm2 TabViewType -int 2
+    defaults write com.googlecode.iterm2 TabViewType -int 0
     defaults write com.googlecode.iterm2 UseBorder -int 0
     defaults write com.googlecode.iterm2 HideScrollbar -int 1
     defaults write com.googlecode.iterm2 HideTab -int 1
