@@ -7,5 +7,5 @@ rm -rf ~/Downlodas/nerd-fonts*
 
 
 # Copy nvim config
-rm -rf $HOME/.config/nvim
-cp -R config/nvim $HOME/.config/nvim
+rm -rf ~/.config/nvim
+ln -s ~/.dotfiles/plugins/dotfiles-alberto-chamorro/nvim/config/nvim ~/.config/nvim
