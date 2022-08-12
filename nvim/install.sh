@@ -5,3 +5,7 @@ unzip ~/Downloads/nerd-fonts.zip -d ~/Downlodas/nerd-fonts
 cp ~/Downlodas/nerd-fonts/*.ttf ~/Library/Fonts
 rm -rf ~/Downlodas/nerd-fonts*
 
+
+# Copy nvim config
+rm -rf $HOME/.config/nvim
+cp -R config/nvim $HOME/.config/nvim
