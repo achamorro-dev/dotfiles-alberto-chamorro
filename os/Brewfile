@@ -11,6 +11,7 @@ brew 'fzf'
 brew 'neovim'
 brew 'ripgrep'
 brew 'lazygit'
+brew 'tmux'
 
 cask 'google-chrome'
 cask 'flutter'
