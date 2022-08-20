@@ -58,14 +58,14 @@ keymap("v", ">", ">gv", opts)
 
 --   Move text and up
 -- FIXME
-keymap("n", "<A-j>", ":m .+1<CR>==gi<CR>", opts)
-keymap("n", "<A-k>", ":m .-2<CR>==gi<CR>", opts)
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+-- keymap("n", "<A-j>", ":m .+1<CR>==gi<CR>", opts)
+-- keymap("n", "<A-k>", ":m .-2<CR>==gi<CR>", opts)
+-- keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+-- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+-- keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+-- keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+-- keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+-- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 --   Paste code removing the text selected
 keymap("v", "p", '"_dP', opts)
