@@ -12,6 +12,7 @@ brew 'neovim'
 brew 'ripgrep'
 brew 'lazygit'
 brew 'tmux'
+brew 'starship' # Prompt
 
 cask 'google-chrome'
 cask 'flutter'
