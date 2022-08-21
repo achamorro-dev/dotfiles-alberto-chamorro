@@ -1,3 +1,6 @@
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/cask'
 tap 'epk/epk'
 
 brew 'zsh-completions'
@@ -12,12 +15,20 @@ brew 'neovim'
 brew 'ripgrep'
 brew 'lazygit'
 brew 'tmux'
-brew 'starship' # Prompt
+
+# Prompt
+brew 'starship'
+brew 'tree'
+
+# To view json files
+brew 'jq'
+
+cask 'caffeine'
+cask 'appcleaner'
 
 cask 'google-chrome'
 cask 'flutter'
 cask 'aerial'
-# cask 'alfred'
 cask 'raycast'
 cask 'clipy'
 cask 'dash'
@@ -40,3 +51,5 @@ cask 'keycastr'
 cask 'min'
 cask 'spotify'
 cask 'robo-3t'
+cask 'docker'
+

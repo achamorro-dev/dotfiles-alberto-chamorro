@@ -9,6 +9,9 @@ function set_macos_defaults() {
     # Use F1,F2 keys as standard
     defaults write -globalDomain com.apple.keyboard.fnState -boolean true
 
+    # Disable press-and-hold for keys in favor of key repeat
+    defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
     # Change mouse/trackpad settings
     defaults write -globalDomain com.apple.trackpad.enableSecondaryClick -int 1
     defaults write -globalDomain com.apple.trackpad.fiveFingerPinchSwipeGesture -int 2
@@ -31,9 +34,32 @@ function set_macos_defaults() {
     defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
     defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+    # Use list view in all Finder windows by default
+    # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
+    defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+    # Keep folders on top when sorting by name
+    defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+    # Finder: show all filename extensions
+    defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+    # Show hidden files
+    defaults write com.apple.finder AppleShowAllFiles -bool true
+
+    # Avoid creating .DS_Store files on network or USB volumes
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+    defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
     # Use scroll gesture with the Ctrl (^) modifier key to zoom
     defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
     defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
+    # Show the ~/Library folder
+    chflags nohidden ~/Library
+    
+    # Show the /Volumes folder
+    chflags nohidden /Volumes
 
     # Sleep the display after 10 minutes
     sudo pmset -a displaysleep 10
@@ -78,6 +104,59 @@ function set_macos_defaults() {
     # Bottom left screen corner → Lock screen
     defaults write com.apple.dock wvous-bl-corner -int 13
     defaults write com.apple.dock wvous-bl-modifier -int 1048576
+
+
+    ###############################################################################
+    # File Vault                                                                  #
+    ###############################################################################
+
+    # Enable vault
+    defaults write com.apple.MCX.FileVault2 Enable -string yes
+
+
+    ###############################################################################
+    # Screenshots                                                                 #
+    ###############################################################################
+
+    # Set up directory to save screenshots inside ~/Downloads/screenshots.
+    # I choose  this directory because download folder is my most reviewed dir
+    mkdir -p ~/Downloads/screenshots
+    defaults write com.apple.screencapture location ~/Downloads/screenshots
+
+    # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+    defaults write com.apple.screencapture type -string "png"
+
+
+    ###############################################################################
+    # Dock                                                                        #
+    ###############################################################################
+
+    # Show in Dock just opened applications
+    defaults write com.apple.dock static-only -bool true
+
+    # Automatically hide and show the dock
+    defaults write com.apple.dock autohide -bool true
+
+    # Disable changes in the Dock
+    defaults write com.apple.dock contents-inmutable -bool true
+
+    # The size of the largest magnification. Min 16, Max 128
+    defaults write com.apple.dock largesize -int 50
+    defaults write com.apple.dock tilesize -int 50
+
+    # orientation of the Dock. Values bottom, left and right
+    defaults write com.apple.dock orientation -string bottom
+
+    # Apply all Dock settings
+    killall Dock
+
+    ###############################################################################
+    # Spotify                                                                     #
+    ###############################################################################
+
+    # Does not run when start
+    defaults write com.spotify.client AutoStartSettingIsHidden -int 0
+
 }
 
 #function change_caps_lock_to_control() {
@@ -113,3 +192,4 @@ then
     set_macos_defaults
     # change_caplock_to_control_in_keyboards
 fi
+
