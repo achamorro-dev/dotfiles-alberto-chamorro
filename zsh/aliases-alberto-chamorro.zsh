@@ -23,3 +23,6 @@ alias vi="nvim"
 
 # TMUX
 alias t="tmux"
+alias ta="tmux a -t"
+alias tls="tmux ls"
+alias tn="tmux new -t"
