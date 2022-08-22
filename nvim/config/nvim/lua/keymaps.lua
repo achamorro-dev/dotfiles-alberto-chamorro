@@ -16,12 +16,12 @@ keymap("n", "N", "Nzzzv", opts) -- Center cursor to go previous
 keymap("n", "x", '"_x', opts) -- Don't yank with x
 keymap("n", "<Leader>c", ":bd<CR>", opts) -- Remove current buffer
 
-keymap("n", "+", "<C-a>", opts) -- Increment
-keymap("n", "-", "<C-x>", opts) -- Increment
+-- keymap("n", "+", "<C-a>", opts) -- Increment
+-- keymap("n", "-", "<C-x>", opts) -- Decrement
 
 keymap("n", "dw", "diw", opts) -- Delete the entire word
 keymap("n", "cw", "ciw", opts) -- Change the entire word
-keymap("n", "<C-a>", "gg<S-v>G", opts) -- Select all content
+keymap("n", "<Leader>a", "gg<S-v>G", opts) -- Select all content
 
 --   Split
 keymap("n", "<Leader>h", ":vsplit<CR>", opts) -- Split horizontal
