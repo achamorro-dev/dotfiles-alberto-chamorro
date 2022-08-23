@@ -16,6 +16,7 @@ brew 'ripgrep'
 brew 'lazygit'
 brew 'tmux'
 brew 'lf'
+brew 'exa'
 
 # Prompt
 brew 'starship'

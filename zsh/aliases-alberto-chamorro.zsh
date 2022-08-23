@@ -26,3 +26,8 @@ alias t="tmux"
 alias ta="tmux a -t"
 alias tls="tmux ls"
 alias tn="tmux new -t"
+
+# EXA
+alias ll="exa -l -g --icons --git"
+alias llt="exa -1 --icons --tree --git-ignore"
+
