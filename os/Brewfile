@@ -6,7 +6,7 @@ tap 'epk/epk'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'dash'
-brew 'z'
+brew 'zoxide'
 brew 'nvm' # Node version manager
 brew 'mas'
 brew 'tldr'
