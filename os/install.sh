@@ -105,6 +105,8 @@ function set_macos_defaults() {
     defaults write com.apple.dock wvous-bl-corner -int 13
     defaults write com.apple.dock wvous-bl-modifier -int 1048576
 
+    # Hide Apple top bar
+    defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
     ###############################################################################
     # File Vault                                                                  #
