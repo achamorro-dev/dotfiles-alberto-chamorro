@@ -54,4 +54,5 @@ cask 'min'
 cask 'spotify'
 cask 'robo-3t'
 cask 'docker'
+cask 'roclet'
 
