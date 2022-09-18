@@ -5,8 +5,8 @@ alt_send_esc: false
 window:
   opacity: 0.90
   padding:
-    x: 12
-    y: 12
+    x: 8
+    y: 8
   dynamic_padding: false
   decorations: buttonless
 
@@ -16,3 +16,7 @@ font:
     style: Regular
   size: 14.0
   use_thin_strokes: true
+
+key_bindings:
+  - { key: K,  mods: Alt,           chars: "\x1bk"                       }
+  - { key: J,  mods: Alt,           chars: "\x1bj"                       }
