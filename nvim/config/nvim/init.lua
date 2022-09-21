@@ -23,6 +23,7 @@ require("plugins.lualine")
 require("plugins.bufferline")
 require("plugins.cmp")
 require("plugins.diffview")
+require("plugins.highlightedyank")
 
 require("settings")
 require("keymaps")

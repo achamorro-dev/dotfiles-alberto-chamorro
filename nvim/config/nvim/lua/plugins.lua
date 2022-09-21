@@ -38,24 +38,20 @@ return require("packer").startup(function(use)
 		"glepnir/lspsaga.nvim",
 	})
 
-	-- Instalation of LSP/Debuggers/Other
+	-- Instalation of LSP/Debuggers/Formatters/Other
 	use({
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	})
 
+	-- TypeScript tools
+	use("jose-elias-alvarez/typescript.nvim")
+
 	-- Syntax highlight
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		requires = {
-			"nvim-treesitter/playground",
-			"nvim-treesitter/nvim-treesitter-refactor",
-			"nvim-treesitter/nvim-treesitter-textobjects",
-			"nvim-treesitter/nvim-treesitter-angular",
-			"p00f/nvim-ts-rainbow",
-		},
 	})
 
 	use("norcalli/nvim-colorizer.lua")
@@ -75,6 +71,10 @@ return require("packer").startup(function(use)
 	-- Git
 	use("tpope/vim-fugitive")
 	use("kdheepak/lazygit.nvim")
+	use({
+		"sindrets/diffview.nvim",
+		requires = "nvim-lua/plenary.nvim",
+	})
 
 	-- Show git changes flags
 	use({
@@ -118,6 +118,9 @@ return require("packer").startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
+
+	-- Highlight on yank
+	use("machakann/vim-highlightedyank")
 
 	-- Toggleterm
 	use("akinsho/nvim-toggleterm.lua")

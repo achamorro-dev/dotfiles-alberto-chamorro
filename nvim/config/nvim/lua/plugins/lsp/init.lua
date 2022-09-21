@@ -3,6 +3,7 @@ if not status_ok then
 	return
 end
 
+require("typescript")
 require("plugins.lsp.mason")
 require("plugins.lsp.lsp").setup()
 require("plugins.lsp.null-ls")
