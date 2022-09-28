@@ -27,7 +27,6 @@ brew 'jq'
 
 cask 'caffeine'
 cask 'appcleaner'
-
 cask 'google-chrome'
 cask 'flutter'
 cask 'aerial'
@@ -55,4 +54,5 @@ cask 'spotify'
 cask 'robo-3t'
 cask 'docker'
 cask 'rocket'
+cask 'termius'
 
