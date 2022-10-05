@@ -154,4 +154,7 @@ return require("packer").startup(function(use)
 			opt = true,
 		},
 	})
+
+	-- Flutter
+	use({ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" })
 end)
