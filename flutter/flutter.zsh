@@ -1,1 +1,1 @@
-export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$HOME/fvm/default/bin":$PATH
