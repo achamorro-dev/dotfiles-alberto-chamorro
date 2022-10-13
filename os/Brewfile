@@ -2,6 +2,8 @@ tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/cask'
 tap 'epk/epk'
+tap 'qmk/qmk'
+tap 'homebrew/cask-drivers'
 
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
@@ -17,6 +19,7 @@ brew 'lazygit'
 brew 'tmux'
 brew 'lf'
 brew 'exa'
+brew 'qmk'
 
 # Prompt
 brew 'starship'
@@ -55,4 +58,5 @@ cask 'robo-3t'
 cask 'docker'
 cask 'rocket'
 cask 'termius'
+cask 'qmk-toolbox'
 
