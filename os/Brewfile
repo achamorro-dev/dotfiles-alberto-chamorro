@@ -59,4 +59,5 @@ cask 'docker'
 cask 'rocket'
 cask 'termius'
 cask 'qmk-toolbox'
+cask 'ultimaker-cura'
 
