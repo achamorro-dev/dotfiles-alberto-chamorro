@@ -15,7 +15,6 @@ font:
     family: "SFMono Nerd Font"
     style: Regular
   size: 14.0
-  use_thin_strokes: true
 
 key_bindings:
   - { key: K,  mods: Alt,           chars: "\x1bk"                       }
