@@ -38,7 +38,7 @@ return require("packer").startup(function(use)
 		"glepnir/lspsaga.nvim",
 	})
 
-	-- Instalation of LSP/Debuggers/Formatters/Other
+	-- Installation of LSP/Debuggers/Formatters/Other
 	use({
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
