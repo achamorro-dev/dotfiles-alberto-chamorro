@@ -1,4 +1,32 @@
-return require("packer").startup(function(use)
+-- auto install packer if not installed
+local ensure_packer = function()
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
+end
+local packer_bootstrap = ensure_packer() -- true if packer was just installed
+
+-- autocommand that reloads neovim and installs/updates/removes plugins
+-- when file is saved
+vim.cmd([[ 
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
+
+-- import packer safely
+local status, packer = pcall(require, "packer")
+if not status then
+	return
+end
+
+return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- use 'glepnir/dashboard-nvim'
@@ -8,41 +36,39 @@ return require("packer").startup(function(use)
 	use("arzg/vim-colors-xcode")
 
 	-- IDE
+	-- Add, delete or change surroundings
+	use("tpope/vim-surround")
+	-- Replace with clipboard using gr<motion>
+	use("vim-scripts/ReplaceWithRegister")
+
 	-- Language server protocol
-	-- Completion
+	-- Completion and snippets
 	use({
 		"hrsh7th/nvim-cmp",
 		requires = {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-nvim-lua",
-			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-cmdline",
-			"hrsh7th/cmp-git",
-			"saadparwaiz1/cmp_luasnip",
-			"onsails/lspkind-nvim",
 			"L3MON4D3/LuaSnip",
-			"windwp/nvim-autopairs",
+			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
 		},
 	})
 
-	-- Error lens
-	-- use("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
-
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig",
-		"hrsh7th/cmp-nvim-lsp-signature-help",
+		"hrsh7th/cmp-nvim-lsp",
 		"jose-elias-alvarez/null-ls.nvim",
 		"glepnir/lspsaga.nvim",
+		"onsails/lspkind.nvim",
 	})
 
 	-- Installation of LSP/Debuggers/Formatters/Other
 	use({
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
+		"jayp0521/mason-null-ls.nvim",
 	})
 
 	-- TypeScript tools
@@ -157,4 +183,8 @@ return require("packer").startup(function(use)
 
 	-- Flutter
 	use({ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" })
+
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)

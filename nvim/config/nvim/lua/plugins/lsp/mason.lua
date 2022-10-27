@@ -3,8 +3,16 @@ if not ok then
 	return
 end
 
-local lspconfig = require("lspconfig")
-local mason_lspconfig = require("mason-lspconfig")
+local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not mason_lspconfig_status then
+	return
+end
+
+local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
+if not mason_null_ls_status then
+	return
+end
+
 local servers = {
 	"angularls",
 	"astro",
@@ -43,14 +51,11 @@ mason_lspconfig.setup({
 	ensure_installed = servers,
 })
 
-for _, server in pairs(servers) do
-	local opts = {
-		on_attach = require("plugins.lsp.lsp").on_attach,
-		capabilities = require("plugins.lsp.lsp").capabilities,
-	}
-	local has_custom_opts, server_custom_opts = pcall(require, "plugins.lsp.configs." .. server)
-	if has_custom_opts then
-		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
-	end
-	lspconfig[server].setup(opts)
-end
+mason_null_ls.setup({
+	ensure_installed = {
+		"prettier",
+		"stylua",
+		"eslint_d",
+	},
+	automatic_installation = true,
+})

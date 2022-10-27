@@ -5,6 +5,6 @@ end
 
 require("typescript")
 require("plugins.lsp.mason")
-require("plugins.lsp.lsp").setup()
+require("plugins.lsp.lsp")
 require("plugins.lsp.null-ls")
 require("plugins.lsp.lspsaga")
