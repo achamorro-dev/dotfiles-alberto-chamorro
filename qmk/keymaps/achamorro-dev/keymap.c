@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 enum layers {
   _QWERTY,
-  _NUMBERS,
+  _NUMBERS_NAV,
   _SYMBOLS,
   _ADJUST
 };
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                     TD(TD_N),    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                             KC_LGUI, MO(_SYMBOLS),  LALT_T(KC_ENT),    MT(MOD_RSFT,KC_SPC), MO(_NUMBERS), KC_RALT
+                             KC_LGUI, MO(_SYMBOLS),  LALT_T(KC_ENT),    MT(MOD_RSFT,KC_SPC), MO(_NUMBERS_NAV), KC_RALT
                            //`-------------------------------------'  `--------------------------------------------'
 
   ),
@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 //`--------------------------------'  `-----------------------------------'
   ),
 
-  [_NUMBERS] = LAYOUT_split_3x6_3(
+  [_NUMBERS_NAV] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, KC_LALT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                       KC_LGUI, MO(_ADJUST),KC_LGUI,    KC_SPC, _______, KC_RALT
+                                       KC_LGUI, MO(_ADJUST), KC_ENT,    KC_SPC, _______, KC_RALT
                                    //`-----------------------------'  `--------------------------'
   ),
 
@@ -112,7 +112,7 @@ void oled_render_layer_state(void) {
             oled_write_ln_P(PSTR("Default"), false);
             break;
         case L_LOWER:
-            oled_write_ln_P(PSTR("Numbers"), false);
+            oled_write_ln_P(PSTR("Numbers_Nav"), false);
             break;
         case L_RAISE:
             oled_write_ln_P(PSTR("Symbols"), false);
