@@ -29,6 +29,7 @@ options.splitright = true
 options.autowrite = true
 options.mouse = "a"
 options.cursorline = true
+options.cmdheight = 0
 
 -- consider string-string as whole word
 -- options.iskeyword:append("-")
