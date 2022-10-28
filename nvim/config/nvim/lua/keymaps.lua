@@ -87,17 +87,6 @@ keymap("n", "ggd", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
 keymap("n", "ggr", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
 keymap("n", "ggi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
 
--- lspsaga
-keymap("n", "<F2>", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-keymap("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts)
-keymap("n", "gd", "<Cmd>Lspsaga lsp_finder<CR>", opts)
-keymap("i", "<C-k>", "<Cmd>Lspsaga signature_help<CR>", opts)
-keymap("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts)
-keymap("n", "go", "<Cmd>LSoutlineToggle<CR>", opts)
-keymap("n", "grn", "<Cmd>Lspsaga rename<CR>", opts)
-keymap("n", "<Leader>ca", "<Cmd>Lspsaga code_action<CR>", opts)
-keymap("v", "<Leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", opts)
-
 -- Fugitive
 keymap("n", "<Leader>bl", "<cmd>Git blame<CR>", opts)
 
