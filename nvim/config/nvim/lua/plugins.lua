@@ -71,6 +71,9 @@ return packer.startup(function(use)
 		"jayp0521/mason-null-ls.nvim",
 	})
 
+	-- Test runner
+	use({ "vim-test/vim-test" })
+
 	-- TypeScript tools
 	use("jose-elias-alvarez/typescript.nvim")
 

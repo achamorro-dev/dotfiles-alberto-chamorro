@@ -25,6 +25,7 @@ require("plugins.bufferline")
 require("plugins.cmp")
 require("plugins.diffview")
 require("plugins.highlightedyank")
+require("plugins.vim-test")
 
 require("settings")
 require("keymaps")

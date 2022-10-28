@@ -95,3 +95,8 @@ keymap("n", "<C-g>", "<cmd>LazyGit<CR>", opts)
 
 -- Diffview
 keymap("n", "<Leader>di", "<Cmd>DiffviewOpen<CR>", opts)
+
+-- vim-test
+keymap("n", "tf", "<Cmd>TestFile<CR>", opts)
+keymap("n", "tn", "<Cmd>TestNearest<CR>", opts)
+keymap("n", "ts", "<Cmd>TestSuite<CR>", opts)
