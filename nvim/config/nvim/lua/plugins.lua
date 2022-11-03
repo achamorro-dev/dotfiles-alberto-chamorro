@@ -80,7 +80,9 @@ return packer.startup(function(use)
 	-- Syntax highlight
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
+		run = function()
+			require("nvim-treesitter.install").update({ with_sync = true })
+		end,
 	})
 
 	use("norcalli/nvim-colorizer.lua")
