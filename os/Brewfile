@@ -20,6 +20,7 @@ brew 'tmux'
 brew 'lf'
 brew 'exa'
 brew 'qmk'
+brew 'bitwarden-cli'
 
 # Prompt
 brew 'starship'
