@@ -1,4 +1,9 @@
-require("nvim-tree").setup({
+local status, nvim_tree = pcall(require, "nvim-tree")
+if not status then
+	return
+end
+
+nvim_tree.setup({
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_setup = false,
@@ -31,7 +36,6 @@ require("nvim-tree").setup({
 	},
 	view = {
 		width = 50,
-		height = 30,
 		side = "left",
 		mappings = {
 			custom_only = false,

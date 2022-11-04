@@ -1,3 +1,8 @@
+local status_ok, _  = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+	return
+end
+
 -- include treesitter and its config
 require("nvim-treesitter.configs").setup({
 
