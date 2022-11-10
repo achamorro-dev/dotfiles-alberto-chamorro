@@ -32,8 +32,10 @@ return packer.startup(function(use)
 	-- use 'glepnir/dashboard-nvim'
 
 	-- Themes
-	use("navarasu/onedark.nvim")
-	use("arzg/vim-colors-xcode")
+	-- use("navarasu/onedark.nvim")
+	-- use("arzg/vim-colors-xcode")
+	use("EdenEast/nightfox.nvim")
+	use("marko-cerovac/material.nvim")
 
 	-- IDE
 	-- Add, delete or change surroundings
@@ -41,7 +43,6 @@ return packer.startup(function(use)
 	-- Replace with clipboard using gr<motion>
 	use("vim-scripts/ReplaceWithRegister")
 
-	-- Language server protocol
 	-- Completion and snippets
 	use({
 		"hrsh7th/nvim-cmp",

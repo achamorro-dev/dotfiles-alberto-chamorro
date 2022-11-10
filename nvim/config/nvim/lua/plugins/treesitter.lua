@@ -1,4 +1,4 @@
-local status_ok, _  = pcall(require, "nvim-treesitter.configs")
+local status_ok, _ = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
 	return
 end
@@ -36,10 +36,15 @@ require("nvim-treesitter.configs").setup({
 	highlight = {
 		enable = true,
 		disable = {},
+		additional_vim_regex_highlighting = true,
 	},
 	auto_install = true,
 
 	autotag = {
 		enable = true,
+	},
+	context_comment_string = {
+		enable = true,
+		enable_autocmd = false,
 	},
 })

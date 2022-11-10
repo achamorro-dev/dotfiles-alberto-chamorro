@@ -78,6 +78,8 @@ keymap("n", "<Leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<Leader>g", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>e", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<Leader>o", "<cmd>Telescope oldfiles<CR>", opts)
+keymap("n", "<Leader>s", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
+keymap("n", "go", "<cmd>Telescope lsp_document_symbols<CR>", opts) -- outline
 
 -- NVIM tree
 keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", opts)
@@ -87,7 +89,6 @@ keymap("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, refer
 keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
 keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
-keymap("n", "go", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 keymap("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
 keymap("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
 keymap("n", "<F2>", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
