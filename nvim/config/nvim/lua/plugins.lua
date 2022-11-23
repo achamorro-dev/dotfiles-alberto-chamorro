@@ -72,6 +72,36 @@ return packer.startup(function(use)
 		"jayp0521/mason-null-ls.nvim",
 	})
 
+	-- DAP
+	use({ "mfussenegger/nvim-dap" })
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use({
+		"nvim-telescope/telescope-dap.nvim",
+		requires = {
+			"mfussenegger/nvim-dap",
+			"nvim-telescope/telescope.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
+	use({
+		"theHamsta/nvim-dap-virtual-text",
+		requires = {
+			"mfussenegger/nvim-dap",
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
+	use({
+		"mxsdev/nvim-dap-vscode-js",
+		requires = {
+			"mfussenegger/nvim-dap",
+		},
+	})
+	-- use({
+	-- 	"microsoft/vscode-js-debug",
+	-- 	opt = true,
+	-- 	run = "npm install --legacy-peer-deps && npm run compile",
+	-- })
+
 	-- Test runner
 	use({ "vim-test/vim-test" })
 
@@ -135,7 +165,7 @@ return packer.startup(function(use)
 	--    end
 	--})
 
-	-- Tabs
+	-- File tabs
 	use({
 		"akinsho/nvim-bufferline.lua",
 		requires = "kyazdani42/nvim-web-devicons",

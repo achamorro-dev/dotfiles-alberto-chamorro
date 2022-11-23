@@ -1,4 +1,4 @@
-local status_ok, telescope  = pcall(require, "telescope")
+local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
 	return
 end
@@ -25,3 +25,4 @@ telescope.setup({
 -- require('telescope').load_extension('fzf')
 -- require('telescope').load_extension('media_files')
 require("telescope").load_extension("flutter")
+require("telescope").load_extension("dap")

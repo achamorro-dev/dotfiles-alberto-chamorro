@@ -79,6 +79,7 @@ keymap("n", "<Leader>g", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>e", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<Leader>o", "<cmd>Telescope oldfiles<CR>", opts)
 keymap("n", "<Leader>s", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
+keymap("n", "<Leader>k", "<cmd>Telescope keymaps<CR>", opts)
 keymap("n", "go", "<cmd>Telescope lsp_document_symbols<CR>", opts) -- outline
 
 -- NVIM tree
@@ -97,6 +98,17 @@ keymap("i", "<C-s>", "<Cmd>Lspsaga signature_help<CR>", opts)
 keymap("n", "<Leader>ca", "<Cmd>Lspsaga code_action<CR>", opts)
 keymap("v", "<Leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", opts)
 keymap("n", "grn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
+
+-- Debugging
+keymap("n", "<F5>", ":lua require'dap'.continue()<CR>", opts)
+keymap("n", "<F3>", ":lua require'dap'.step_over()<CR>", opts)
+keymap("n", "<F2>", ":lua require'dap'.step_into()<CR>", opts)
+keymap("n", "<F12>", ":lua require'dap'.step_out()<CR>", opts)
+keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
+keymap("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
+keymap("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
+keymap("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", opts)
+--keymap.set("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>")
 
 -- Fugitive
 keymap("n", "<Leader>bl", "<cmd>Git blame<CR>", opts)
