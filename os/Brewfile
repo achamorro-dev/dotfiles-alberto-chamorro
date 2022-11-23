@@ -26,6 +26,12 @@ brew 'bitwarden-cli'
 brew 'starship'
 brew 'tree'
 
+# Window manager
+brew 'koekeishiya/formulae/yabai'
+
+# Hotkey daemon
+brew 'koekeishiya/formulae/skhd'
+
 # To view json files
 brew 'jq'
 
