@@ -71,7 +71,7 @@ shift + lctrl + alt - r : \
 alt - f         : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
 
-# open terminal, blazingly fast compared to iTerm/Hyper
+# open terminal
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # .blacklist [
