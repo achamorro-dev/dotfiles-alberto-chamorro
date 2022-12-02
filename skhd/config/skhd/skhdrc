@@ -78,6 +78,3 @@ shift + lctrl + alt - r : \
 alt - f         : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
 
-# open terminal
-cmd - backspace : /Applications/Alacritty.app/Contents/MacOS/alacritty
-
