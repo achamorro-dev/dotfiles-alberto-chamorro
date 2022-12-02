@@ -54,6 +54,7 @@ yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Path Finder$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
+yabai -m rule --add app="^Shottr$" manage=off
 
 echo "yabai configuration loaded.." 
 
