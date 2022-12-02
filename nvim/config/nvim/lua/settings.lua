@@ -38,5 +38,6 @@ options.cmdheight = 0
 vim.cmd("autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o")
 
 -- Set colorscheme
-vim.g.material_style = "darker"
-vim.cmd("colorscheme material")
+-- vim.g.material_style = "darker"
+-- vim.cmd("colorscheme material")
+vim.cmd("colorscheme catppuccin")

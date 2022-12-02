@@ -11,7 +11,8 @@ end
 vim.opt.termguicolors = true
 
 require("plugins")
-require("plugins.onedark")
+-- require("plugins.onedark")
+require("plugins.catppuccin")
 require("plugins.autopairs")
 require("plugins.colorizer")
 require("plugins.telescope")

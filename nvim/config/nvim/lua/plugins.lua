@@ -36,6 +36,13 @@ return packer.startup(function(use)
 	-- use("arzg/vim-colors-xcode")
 	use("EdenEast/nightfox.nvim")
 	use("marko-cerovac/material.nvim")
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
+			require("catppuccin").setup()
+		end,
+	})
 
 	-- IDE
 	-- Add, delete or change surroundings
@@ -50,7 +57,7 @@ return packer.startup(function(use)
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
-			"L3MON4D3/LuaSnip",
+			{ "L3MON4D3/LuaSnip", tag = "v1.*" },
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
 		},
@@ -72,35 +79,28 @@ return packer.startup(function(use)
 		"jayp0521/mason-null-ls.nvim",
 	})
 
-	-- DAP
-	use({ "mfussenegger/nvim-dap" })
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-	use({
-		"nvim-telescope/telescope-dap.nvim",
-		requires = {
-			"mfussenegger/nvim-dap",
-			"nvim-telescope/telescope.nvim",
-			"nvim-treesitter/nvim-treesitter",
-		},
-	})
-	use({
-		"theHamsta/nvim-dap-virtual-text",
-		requires = {
-			"mfussenegger/nvim-dap",
-			"nvim-treesitter/nvim-treesitter",
-		},
-	})
-	use({
-		"mxsdev/nvim-dap-vscode-js",
-		requires = {
-			"mfussenegger/nvim-dap",
-		},
-	})
-	-- use({
-	-- 	"microsoft/vscode-js-debug",
-	-- 	opt = true,
-	-- 	run = "npm install --legacy-peer-deps && npm run compile",
-	-- })
+	-- Debugging
+	use("mfussenegger/nvim-dap")
+	use("rcarriga/nvim-dap-ui")
+	use("theHamsta/nvim-dap-virtual-text")
+	use("nvim-telescope/telescope-dap.nvim")
+	-- 	use({
+	-- 		"mfussenegger/nvim-dap",
+	-- 		opt = true,
+	-- 		event = "BufReadPre",
+	-- 		module = { "dap" },
+	-- 		wants = { "nvim-dap-virtual-text", "nvim-dap-ui" },
+	-- 		requires = {
+	-- 			"theHamsta/nvim-dap-virtual-text",
+	-- 			"rcarriga/nvim-dap-ui",
+	-- 			"nvim-telescope/telescope-dap.nvim",
+	-- 			{ "jbyuki/one-small-step-for-vimkind", module = "osv" },
+	-- 		},
+	-- 		-- config = function()
+	-- 			-- require("plugins.dap").setup()
+	-- 		-- end,
+	-- 	})
+	use({ "mxsdev/nvim-dap-vscode-js" })
 
 	-- Test runner
 	use({ "vim-test/vim-test" })
