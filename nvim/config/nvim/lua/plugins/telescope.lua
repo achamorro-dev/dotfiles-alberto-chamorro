@@ -16,6 +16,9 @@ telescope.setup({
 		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 	},
 	pickers = {
+		colorscheme = {
+			enable_preview = true,
+		},
 		buffers = {
 			sort_lastused = true,
 		},
