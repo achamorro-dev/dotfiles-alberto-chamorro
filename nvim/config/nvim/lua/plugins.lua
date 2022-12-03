@@ -57,6 +57,10 @@ return packer.startup(function(use)
 			{ "L3MON4D3/LuaSnip", tag = "v1.*" },
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
+			{
+				"dsznajder/vscode-es7-javascript-react-snippets",
+				run = "yarn install --frozen-lockfile && yarn compile",
+			},
 		},
 	})
 
