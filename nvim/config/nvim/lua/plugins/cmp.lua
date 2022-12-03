@@ -13,7 +13,8 @@ if not lspkind_status then
 	return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/lua/plugins/snippets/typescript" } })
 
 vim.opt.completeopt = "menu,menuone,noselect"
 

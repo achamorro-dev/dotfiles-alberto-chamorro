@@ -1,0 +1,17 @@
+{
+  "name": "custom-typescript",
+  "version": "1.0.0",
+  "description": "TypeScript code snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./jest.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./archimedes.json"
+      }
+    ]
+  }
+}
