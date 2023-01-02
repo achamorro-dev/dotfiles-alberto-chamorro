@@ -21,6 +21,7 @@ brew 'lf'
 brew 'exa'
 brew 'qmk'
 brew 'bitwarden-cli'
+brew 'docker-compose'
 
 # Prompt
 brew 'starship'
