@@ -36,7 +36,21 @@ local on_attach = function(client, bufnr)
 		keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
 		keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>")
 		keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>")
+		keymap.set("n", "<leader>am", ":TypescriptAddMissingImports<CR>")
 	end
+
+	-- format on save
+	vim.api.nvim_create_autocmd("BufWritePre", {
+		group = vim.api.nvim_create_augroup("LspFormatting", { clear = true }),
+		buffer = bufnr,
+		callback = function()
+			if client.name == "tsserver" then
+				typescript.actions.removeUnused({ sync = true })
+				typescript.actions.organizeImports({ sync = true })
+			end
+			vim.lsp.buf.format()
+		end,
+	})
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
