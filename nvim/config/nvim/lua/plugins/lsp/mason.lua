@@ -32,6 +32,7 @@ local servers = {
 	"jdtls",
 	"jsonls",
 	"marksman",
+	"kotlin_language_server",
 	"rust_analyzer",
 	"sumneko_lua",
 	"svelte",
