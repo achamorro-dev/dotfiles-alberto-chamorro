@@ -1,5 +1,8 @@
 local options = vim.o
 
+vim.g.mapleader = " "
+--vim.g.snippets = "luasnip"
+
 options.relativenumber = true
 options.ruler = true
 options.splitright = true
@@ -36,8 +39,3 @@ options.cmdheight = 0
 
 -- Stop comments on newline
 vim.cmd("autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o")
-
--- Set colorscheme
--- vim.g.material_style = "darker"
--- vim.cmd("colorscheme material")
-vim.cmd("colorscheme catppuccin")

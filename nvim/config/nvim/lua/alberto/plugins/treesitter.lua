@@ -1,10 +1,13 @@
-local status_ok, _ = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-	return
-end
-
--- include treesitter and its config
-require("nvim-treesitter.configs").setup({
+return {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    dependencies = {
+      "nvim-treesitter/playground",
+      "nvim-treesitter/nvim-treesitter-refactor",
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
+    config = function()
+    require("nvim-treesitter.configs").setup({
 
 	-- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
 	ensure_installed = {
@@ -39,12 +42,13 @@ require("nvim-treesitter.configs").setup({
 		additional_vim_regex_highlighting = true,
 	},
 	auto_install = true,
-
-	autotag = {
-		enable = true,
-	},
+  indent = {
+      enable = true,
+  },
 	context_comment_string = {
 		enable = true,
 		enable_autocmd = false,
 	},
 })
+    end
+  }
