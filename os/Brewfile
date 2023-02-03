@@ -22,6 +22,7 @@ brew 'exa'
 brew 'qmk'
 brew 'bitwarden-cli'
 brew 'docker-compose'
+brew 'git-flow-avh'
 
 # Prompt
 brew 'starship'
