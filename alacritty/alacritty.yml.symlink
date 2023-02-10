@@ -3,7 +3,7 @@ live_config_reload: true
 alt_send_esc: false
 
 window:
-  opacity: 0.90
+  opacity: 1.0
   padding:
     x: 8
     y: 8

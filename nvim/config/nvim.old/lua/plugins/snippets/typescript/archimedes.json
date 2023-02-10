@@ -1,0 +1,20 @@
+{
+  "Archimedes Query": {
+    "prefix": "ar-query",
+    "body": [
+      "import { Query } from '@archimedes/arch'",
+      "",
+      "export class ${1} extends Query<${2:Result}${3:Param}> {",
+      "",
+      "  constructor(${4}) {",
+      "    super()",
+      "  }",
+      "",
+      "  internalExecute(${3:Param}): Promise<${2:Result}> {",
+      "    ${5}",
+      "  }",
+      "}"
+    ],
+    "description": "Archimedes Query"
+  }
+}
