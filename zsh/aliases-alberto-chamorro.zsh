@@ -4,6 +4,7 @@ alias w="cd $HOME/workspace"
 ## COMMANDS
 alias c="clear"
 alias co="code ."
+alias h="history -10000 | fzf --reverse"
 
 # NPM
 alias ns="npm run serve"
