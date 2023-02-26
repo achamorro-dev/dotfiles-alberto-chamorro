@@ -1,4 +1,4 @@
-return{
+return {
 	"angularls",
 	"astro",
 	"bashls",
@@ -14,7 +14,7 @@ return{
 	"marksman",
 	"kotlin_language_server",
 	"rust_analyzer",
-	"sumneko_lua",
+	"lua_ls",
 	"svelte",
 	"tsserver",
 	"tailwindcss",

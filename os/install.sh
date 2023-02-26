@@ -110,6 +110,9 @@ function set_macos_defaults() {
     # Show Apple top bar
     defaults write NSGlobalDomain _HIHideMenuBar -bool false
 
+    # Enable subpixel font rendering on non-Apple LCDs
+    defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
     ###############################################################################
     # File Vault                                                                  #
     ###############################################################################
