@@ -1,9 +1,9 @@
 local options = vim.o
 
 vim.g.mapleader = " "
---vim.g.snippets = "luasnip"
 
-options.relativenumber = true
+options.relativenumber = false
+options.number = true
 options.ruler = true
 options.splitright = true
 options.splitbelow = true

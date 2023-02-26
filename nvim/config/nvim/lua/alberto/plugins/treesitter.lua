@@ -39,7 +39,7 @@ return {
 			highlight = {
 				enable = true,
 				disable = {},
-				additional_vim_regex_highlighting = true,
+				additional_vim_regex_highlighting = false,
 			},
 			auto_install = true,
 			indent = {
