@@ -4,7 +4,6 @@ alias w="cd $HOME/workspace"
 ## COMMANDS
 alias c="clear"
 alias co="code ."
-alias h="history -10000 | fzf --reverse"
 alias g="lazygit"
 
 # NPM
