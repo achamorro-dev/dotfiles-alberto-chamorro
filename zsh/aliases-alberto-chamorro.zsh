@@ -4,6 +4,8 @@ alias w="cd $HOME/workspace"
 ## COMMANDS
 alias c="clear"
 alias co="code ."
+alias h="history -10000 | fzf --reverse"
+alias g="lazygit"
 
 # NPM
 alias ns="npm run serve"
@@ -26,6 +28,7 @@ alias t="tmux"
 alias ta="tmux a -t"
 alias tls="tmux ls"
 alias tn="tmux new -t"
+alias tk="tmux kill-session -t"
 
 # EXA
 alias ll="exa -l -g --icons --git"

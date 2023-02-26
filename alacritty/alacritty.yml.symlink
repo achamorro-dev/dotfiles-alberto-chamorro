@@ -3,10 +3,10 @@ live_config_reload: true
 alt_send_esc: false
 
 window:
-  opacity: 0.90
+  opacity: 1
   padding:
-    x: 8
-    y: 8
+    x: 0
+    y: 0
   dynamic_padding: false
   decorations: buttonless
 
@@ -16,6 +16,18 @@ font:
     style: Regular
   size: 14.0
 
+mouse:
+  hide_when_typing: true
+  save_to_clipboard: true
+
+colors:
+  # Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xFFFFFF'
+
 key_bindings:
-  - { key: K,  mods: Alt,           chars: "\x1bk"                       }
-  - { key: J,  mods: Alt,           chars: "\x1bj"                       }
+  - { key: K,  mods: Alt,           chars: "\x1ak"           }
+  - { key: J,  mods: Alt,           chars: "\x1aj"           }
+  - { key: G,  mods: Control,       chars: "\x1ag"           }
+

@@ -1,5 +1,7 @@
 function set_macos_defaults() {
-    # Reference https://github.com/mathiasbynens/dotfiles/blob/main/.macos
+    # References
+    # https://macos-defaults.com/
+    # https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
     # Change keyboard speed
     defaults write NSGlobalDomain KeyRepeat -int 1
@@ -108,6 +110,9 @@ function set_macos_defaults() {
     # Show Apple top bar
     defaults write NSGlobalDomain _HIHideMenuBar -bool false
 
+    # Enable subpixel font rendering on non-Apple LCDs
+    defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
     ###############################################################################
     # File Vault                                                                  #
     ###############################################################################
@@ -148,6 +153,12 @@ function set_macos_defaults() {
 
     # orientation of the Dock. Values bottom, left and right
     defaults write com.apple.dock orientation -string bottom
+    
+    # Remove the Auto-Hide Dock delay
+    defaults write com.apple.Dock autohide-delay -float 0
+
+    # Disable earrange spaces automatically
+    defaults write com.apple.dock "mru-spaces" -bool "false"
 
     # Apply all Dock settings
     killall Dock

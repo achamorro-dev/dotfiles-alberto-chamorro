@@ -4,6 +4,10 @@ if [[ ! -d $TPM_DIRECTORY ]];then
   git clone https://github.com/tmux-plugins/tpm $TPM_DIRECTORY
 fi
 
-# Copy tmux config
-rm -rf ~/.config/tmux ~/.tmux.conf
-ln -s ~/.dotfiles/plugins/dotfiles-alberto-chamorro/tmux/config/tmux/tmux.conf ~/.tmux.conf
+# Link tmux config
+TMUX_CONFIG_DIRECTORY=~/.config/tmux
+DOTFILES_TMUX_DIRECTORY=~/.dotfiles/plugins/dotfiles-alberto-chamorro/tmux/config/tmux
+
+rm -f ${TMUX_CONFIG_DIRECTORY} ~/.config/tmux.conf
+ln -s ${DOTFILES_TMUX_DIRECTORY} ${TMUX_CONFIG_DIRECTORY}
+
