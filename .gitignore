@@ -1,4 +1,5 @@
 .idea/
 
 **/nvim/plugin/packer_compiled.lua
+tmux/config/tmux/plugins
 .DS_Store
