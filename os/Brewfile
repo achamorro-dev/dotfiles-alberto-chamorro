@@ -5,6 +5,7 @@ tap 'epk/epk'
 tap 'qmk/qmk'
 tap 'homebrew/cask-drivers'
 tap 'leoafarias/fvm'
+tap 'arl/arl'
 
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
@@ -25,6 +26,7 @@ brew 'bitwarden-cli'
 brew 'docker-compose'
 brew 'git-flow-avh'
 brew 'fvm'
+brew 'gitmux'
 
 # Prompt
 brew 'starship'
