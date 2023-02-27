@@ -76,4 +76,5 @@ cask 'qmk-toolbox'
 cask 'ultimaker-cura'
 cask 'shottr'
 cask 'dbeaver-community'
+cask 'arc'
 
