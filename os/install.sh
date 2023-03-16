@@ -170,6 +170,12 @@ function set_macos_defaults() {
     # Does not run when start
     defaults write com.spotify.client AutoStartSettingIsHidden -int 0
 
+    ###############################################################################
+    # VSCode                                                                     #
+    ###############################################################################
+
+    # Disable Apple PressAndHold behaviour 
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 }
 
 #function change_caps_lock_to_control() {
