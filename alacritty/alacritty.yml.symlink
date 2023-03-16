@@ -7,6 +7,9 @@ alt_send_esc: false
 
 window:
   opacity: 1
+  padding:
+    x: 2
+    y: 2
   dynamic_padding: true
   decorations: buttonless
 
@@ -29,5 +32,7 @@ mouse:
 key_bindings:
   - { key: K,  mods: Alt,           chars: "\x1ak"           }
   - { key: J,  mods: Alt,           chars: "\x1aj"           }
-  - { key: G,  mods: Command,       chars: "\x1ag"           }
+  - { key: G,  mods: Command,       chars: "\x01g"           }
+  - { key: W,  mods: Command,       chars: "\x01x"           }
+  - { key: P,  mods: Command,       chars: "\x01F"           }
 
