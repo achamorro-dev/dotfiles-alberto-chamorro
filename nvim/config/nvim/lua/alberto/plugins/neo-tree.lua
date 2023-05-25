@@ -29,7 +29,7 @@ return {
 					visible = true,
 				},
 				follow_current_file = true,
-				group_empty_dirs = true,
+				group_empty_dirs = false,
 			},
 			event_handlers = {
 				{

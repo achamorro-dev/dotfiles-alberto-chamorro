@@ -3,8 +3,6 @@ live_config_reload: true
 env:
   TERM: xterm-256color
 
-alt_send_esc: false
-
 window:
   opacity: 1
   padding:
@@ -29,10 +27,11 @@ mouse:
   hide_when_typing: true
   save_to_clipboard: true
 
+# https://www.ibm.com/docs/en/i/7.2?topic=values-vtxxx-key-by-5250-function
 key_bindings:
   - { key: K,  mods: Alt,           chars: "\x1ak"           }
   - { key: J,  mods: Alt,           chars: "\x1aj"           }
   - { key: G,  mods: Command,       chars: "\x01g"           }
-  - { key: W,  mods: Command,       chars: "\x01x"           }
+  - { key: D,  mods: Command,       chars: "\x01\x04"        }
   - { key: P,  mods: Command,       chars: "\x01F"           }
 

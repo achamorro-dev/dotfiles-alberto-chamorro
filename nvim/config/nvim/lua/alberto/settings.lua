@@ -34,8 +34,11 @@ options.mouse = "a"
 options.cursorline = true
 options.cmdheight = 0
 
+options.undodir = os.getenv("HOME") .. "/.vim/undodir"
+options.undofile = true
+
 -- consider string-string as whole word
--- options.iskeyword:append("-")
+-- options.iskeyword:append "-"
 
 -- Stop comments on newline
 vim.cmd("autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o")

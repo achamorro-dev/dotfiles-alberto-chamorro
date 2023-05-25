@@ -46,7 +46,7 @@ keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 keymap("i", "jh", "<ESC>", opts)
 
 --   Terminal controls
-keymap("t", "<esc>", [[<C-\><C-n>]], opts)
+--keymap("t", "<esc>", [[<C-\><C-n>]], opts)
 
 -- Save and quit faster
 keymap("n", "<Leader>w", ":w<CR>", opts)
@@ -66,7 +66,8 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
---   Paste code removing the text selected
-keymap("v", "p", '"_dP', opts)
+--   Clear search with <esc>
+keymap("n", "<esc>", "<cmd>noh<cr><esc>", opts)
+keymap("i", "<esc>", "<cmd>noh<cr><esc>", opts)
 
 ----- End VIM keyamps

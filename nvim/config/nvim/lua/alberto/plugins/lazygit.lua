@@ -1,7 +1,15 @@
+local Util = require("alberto.util")
+
 return {
-    "kdheepak/lazygit.nvim",
-    cmd = "Lazygit",
-    keys = {
-      { "<C-g>", "<cmd>LazyGit<CR>", desc = "Lazygit" }
-    }
+	"kdheepak/lazygit.nvim",
+	cmd = "Lazygit",
+	keys = {
+		{
+			"<C-g>",
+			function()
+				Util.float_term({ "lazygit" })
+			end,
+			desc = "Lazygit",
+		},
+	},
 }

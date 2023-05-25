@@ -4,6 +4,7 @@
         "vim",
         "ipairs",
         "require",
-        "pcall"
+        "pcall",
+        "Util"
     ]
 }
