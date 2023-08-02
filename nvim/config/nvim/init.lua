@@ -1,5 +1,2 @@
-require("alberto.settings")
-require("alberto.lazy")
-
-require("alberto.keymaps")
-require("alberto.autocommands")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
