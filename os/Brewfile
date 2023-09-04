@@ -36,8 +36,6 @@ brew 'starship'
 brew 'tree'
 # Window manager
 brew 'koekeishiya/formulae/yabai'
-# Hotkey daemon
-brew 'koekeishiya/formulae/skhd'
 # To view json files
 brew 'jq'
 
@@ -49,7 +47,6 @@ cask 'firefox'
 cask 'flutter'
 cask 'aerial'
 cask 'raycast'
-cask 'clipy'
 cask 'dash'
 cask 'slack'
 cask 'discord'
