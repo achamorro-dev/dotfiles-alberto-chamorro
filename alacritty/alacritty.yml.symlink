@@ -15,7 +15,7 @@ font:
   normal:
     family: "SFMono Nerd Font"
     style: Regular
-  size: 14.0
+  size: 12.0
 
 import:
   - ~/.dotfiles/plugins/dotfiles-alberto-chamorro/alacritty/themes/catppuccin/catppuccin-mocha.yml
