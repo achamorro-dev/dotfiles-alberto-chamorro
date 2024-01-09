@@ -57,6 +57,10 @@ function set_macos_defaults() {
     defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
     defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
+    # Don’t group windows by application in Mission Control
+    # (i.e. use the old Exposé behavior instead)
+    defaults write com.apple.dock expose-group-by-app -bool false
+
     # Show the ~/Library folder
     chflags nohidden ~/Library
     
