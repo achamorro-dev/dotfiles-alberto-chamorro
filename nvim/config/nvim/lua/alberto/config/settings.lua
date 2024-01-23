@@ -33,6 +33,7 @@ options.autowrite = true
 options.mouse = "a"
 options.cursorline = true
 options.cmdheight = 0
+options.signcolumn = "yes"
 
 -- consider string-string as whole word
 -- options.iskeyword:append("-")
