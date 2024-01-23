@@ -1,2 +1,3 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+require("alberto.config.settings")
+require("alberto.config.plugins")
+require("alberto.config.keymaps")
