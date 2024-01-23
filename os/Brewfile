@@ -37,6 +37,7 @@ brew 'tree'
 brew 'koekeishiya/formulae/yabai'
 # To view json files
 brew 'jq'
+brew 'wget'
 
 cask 'caffeine'
 cask 'appcleaner'
