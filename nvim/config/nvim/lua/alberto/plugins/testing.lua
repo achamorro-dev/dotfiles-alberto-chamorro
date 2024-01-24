@@ -6,26 +6,21 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		"vim-test/vim-test",
 		"nvim-neotest/neotest-jest",
-    "nvim-neotest/neotest-plenary"
+		"nvim-neotest/neotest-plenary",
 	},
 	config = function()
 		require("neotest").setup({
-			status = { virtual_text = true },
-			output = { open_on_run = true },
+			status = {
+				enabled = true,
+				signs = true,
+				virtual_text = true,
+			},
 			adapters = {
-				-- require("neotest-jest")({
-				-- 	jestCommand = "npm test --",
-				-- 	jestConfigFile = "jest.config.ts",
-				-- 	env = { CI = true },
-				-- 	cwd = function(path)
-				-- 		return vim.fn.getcwd()
-				-- 	end,
-				-- }),
-        require("neotest-plenary"),
+				require("neotest-plenary"),
 			},
 		})
 
-    vim.api.nvim_exec(
+		vim.api.nvim_exec(
 			[[
           " Test config
           let test#strategy = "neovim"

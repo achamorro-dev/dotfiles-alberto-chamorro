@@ -2,8 +2,8 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-    lazy = false,
-    priority = 100,
+		lazy = false,
+		priority = 100,
 		dependencies = {
 			"nvim-treesitter/playground",
 			"nvim-treesitter/nvim-treesitter-refactor",
@@ -38,6 +38,8 @@ return {
 					"dart",
 					"scss",
 					"sql",
+					"markdown",
+					"markdown_inline",
 				},
 				highlight = {
 					enable = true,
