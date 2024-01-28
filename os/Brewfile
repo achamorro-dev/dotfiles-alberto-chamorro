@@ -38,6 +38,8 @@ brew 'koekeishiya/formulae/yabai'
 # To view json files
 brew 'jq'
 brew 'wget'
+# Supabase CLI
+brew 'supabase/tap/supabase'
 
 cask 'caffeine'
 cask 'appcleaner'
