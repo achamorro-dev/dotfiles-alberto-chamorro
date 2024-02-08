@@ -41,7 +41,7 @@ brew 'wget'
 # Supabase CLI
 brew 'supabase/tap/supabase'
 
-cask 'caffeine'
+cask 'keepingyouawake'
 cask 'appcleaner'
 cask 'google-chrome'
 cask 'brave-browser'
