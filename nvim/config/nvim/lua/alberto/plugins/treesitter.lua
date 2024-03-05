@@ -30,7 +30,6 @@ return {
 					"java",
 					"rust",
 					"go",
-					"markdown",
 					"make",
 					"json",
 					"vim",
@@ -44,7 +43,7 @@ return {
 				highlight = {
 					enable = true,
 					disable = {},
-					additional_vim_regex_highlighting = false,
+					additional_vim_regex_highlighting = true,
 				},
 				auto_install = true,
 				indent = {
