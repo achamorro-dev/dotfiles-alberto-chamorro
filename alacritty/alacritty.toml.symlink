@@ -1,4 +1,4 @@
-import = ["/Users/alberto/.dotfiles/plugins/dotfiles-alberto-chamorro/alacritty/themes/catppuccin/catppuccin-mocha.toml"]
+import = ["/Users/alberto/.dotfiles/plugins/dotfiles-alberto-chamorro/alacritty/themes/github/github_dark.toml"]
 live_config_reload = true
 
 [env]
