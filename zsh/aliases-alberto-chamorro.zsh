@@ -38,7 +38,8 @@ alias tls="tmux ls"
 alias tn="tmux new -t"
 alias tk="tmux kill-session -t"
 
-# EXA
+# LS
+alias l="ls -a | fzf"
 alias ll="exa -l -g --icons --git"
 alias llt="exa -1 --icons --tree --git-ignore"
 
