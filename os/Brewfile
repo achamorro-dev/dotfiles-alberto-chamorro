@@ -38,6 +38,8 @@ brew 'koekeishiya/formulae/yabai'
 # To view json files
 brew 'jq'
 brew 'wget'
+# Cat clone with syntax highlightin and git integration
+brew 'bat'
 # Supabase CLI
 brew 'supabase/tap/supabase'
 

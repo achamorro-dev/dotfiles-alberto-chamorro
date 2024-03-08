@@ -63,7 +63,7 @@ function set_macos_defaults() {
 
     # Show the ~/Library folder
     chflags nohidden ~/Library
-    
+
     # Show the /Volumes folder
     chflags nohidden /Volumes
 
@@ -124,7 +124,6 @@ function set_macos_defaults() {
     # Enable vault
     defaults write com.apple.MCX.FileVault2 Enable -string yes
 
-
     ###############################################################################
     # Screenshots                                                                 #
     ###############################################################################
@@ -136,7 +135,6 @@ function set_macos_defaults() {
 
     # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
     defaults write com.apple.screencapture type -string "png"
-
 
     ###############################################################################
     # Dock                                                                        #
@@ -157,7 +155,7 @@ function set_macos_defaults() {
 
     # orientation of the Dock. Values bottom, left and right
     defaults write com.apple.dock orientation -string bottom
-    
+
     # Remove the Auto-Hide Dock delay
     defaults write com.apple.Dock autohide-delay -float 0
 
@@ -178,13 +176,11 @@ function set_macos_defaults() {
     # VSCode                                                                     #
     ###############################################################################
 
-    # Disable Apple PressAndHold behaviour 
+    # Disable Apple PressAndHold behaviour
     defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 }
 
-if test "$(uname)" = "Darwin"
-then
+if test "$(uname)" = "Darwin"; then
     blue "Setting MacOS defaults"
     set_macos_defaults
 fi
-
