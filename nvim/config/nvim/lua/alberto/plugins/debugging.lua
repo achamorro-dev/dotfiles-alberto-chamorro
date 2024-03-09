@@ -185,7 +185,7 @@ return {
 				function()
 					require("dap").toggle_breakpoint()
 				end,
-				desc = "Step Over",
+				desc = "Toggle breakpoint",
 			},
 			{
 				"<leader>ds",
