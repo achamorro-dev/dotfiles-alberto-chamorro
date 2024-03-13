@@ -24,9 +24,26 @@ return {
 			pickers = {
 				colorscheme = {
 					enable_preview = true,
+					theme = "dropdown",
 				},
 				buffers = {
 					sort_lastused = true,
+					hidden = true,
+					previewer = false,
+					theme = "dropdown",
+				},
+				find_files = {
+					hidden = true,
+					previewer = false,
+					theme = "dropdown",
+				},
+				live_grep = {
+					hidden = true,
+					theme = "dropdown",
+				},
+				current_buffer_fuzzy_find = {
+					hidden = true,
+					theme = "dropdown",
 				},
 			},
 			extensions = {
