@@ -40,3 +40,10 @@ options.signcolumn = "yes"
 
 -- Stop comments on newline
 vim.cmd("autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o")
+
+-- Mdx support
+vim.filetype.add({
+	extension = {
+		mdx = "mdx",
+	},
+})
