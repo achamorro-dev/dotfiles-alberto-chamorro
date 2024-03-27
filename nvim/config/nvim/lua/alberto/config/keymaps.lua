@@ -25,10 +25,11 @@ keymap("n", "<Leader>h", ":vsplit<CR>", opts) -- Split horizontal
 keymap("n", "<Leader>v", ":split<CR>", opts) -- Split vertical
 
 --   Move between panes with Ctrl+h/j/k/l
-keymap("n", "<C-h>", ":wincmd h<CR>", opts)
-keymap("n", "<C-j>", ":wincmd j<CR>", opts)
-keymap("n", "<C-k>", ":wincmd k<CR>", opts)
-keymap("n", "<C-l>", ":wincmd l<CR>", opts)
+-- Use vim-tmux-navigator instead
+-- keymap("n", "<C-h>", ":wincmd h<CR>", opts)
+-- keymap("n", "<C-j>", ":wincmd j<CR>", opts)
+-- keymap("n", "<C-k>", ":wincmd k<CR>", opts)
+-- keymap("n", "<C-l>", ":wincmd l<CR>", opts)
 
 --   Move between buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
