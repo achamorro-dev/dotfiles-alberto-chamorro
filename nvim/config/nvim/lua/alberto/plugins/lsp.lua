@@ -1,3 +1,27 @@
+local servers = {
+	"angularls",
+	"astro",
+	"bashls",
+	"cssls",
+	"cssmodules_ls",
+	"dockerls",
+	"dotls",
+	"eslint",
+	"emmet_ls",
+	"html",
+	"jdtls",
+	"jsonls",
+	"marksman",
+	"kotlin_language_server",
+	"rust_analyzer",
+	"lua_ls",
+	"svelte",
+	"tsserver",
+	"tailwindcss",
+	"vuels",
+	"yamlls",
+}
+
 return {
 	{
 		"williamboman/mason.nvim",
@@ -20,40 +44,17 @@ return {
 		end,
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"angularls",
-					"astro",
-					"bashls",
-					"cssls",
-					"cssmodules_ls",
-					"dockerls",
-					"dotls",
-					"eslint",
-					"emmet_ls",
-					"html",
-					"jdtls",
-					"jsonls",
-					"marksman",
-					"kotlin_language_server",
-					"rust_analyzer",
-					"lua_ls",
-					"svelte",
-					"tsserver",
-					"tailwindcss",
-					"vuels",
-					"yamlls",
-				},
-				automatic_installation = true,
-			})
-		end,
-	},
-	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"jose-elias-alvarez/typescript.nvim",
+			{
+				"williamboman/mason-lspconfig.nvim",
+				event = { "BufReadPre", "BufNewFile" },
+				opts = {
+					ensure_installed = servers,
+					automatic_installation = true,
+				},
+			},
 			{
 				"ThePrimeagen/refactoring.nvim",
 				dependencies = {
@@ -72,16 +73,15 @@ return {
 		config = function()
 			local lspconfig = require("lspconfig")
 			local typescript = require("typescript")
-			local capabilities =
-				require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			local on_attach = function(ev)
-				-- Enable completion triggered by <c-x><c-o>
-				vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+			local on_attach = function(client, bufnr)
+				-- -- Enable completion triggered by <c-x><c-o>
+				-- vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
 				-- Buffer local mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
-				local opts = { buffer = ev.buf }
+				local opts = { buffer = bufnr }
 				local keymap = vim.keymap
 				keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts) -- show definition, references
 				keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
@@ -96,7 +96,6 @@ return {
 				keymap.set("n", "grn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
 
 				-- typescript specific keymaps (e.g. rename file and update imports)
-				local client = vim.lsp.get_client_by_id(ev.data.client_id)
 				if client.name == "tsserver" then
 					keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
 					keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>")
@@ -107,7 +106,7 @@ return {
 				-- format on save
 				vim.api.nvim_create_autocmd("BufWritePre", {
 					group = vim.api.nvim_create_augroup("LspFormatting", { clear = true }),
-					buffer = ev.buf,
+					buffer = bufnr,
 					callback = function()
 						vim.lsp.buf.format()
 					end,
@@ -115,7 +114,37 @@ return {
 			end
 
 			-- Setups
-			lspconfig.lua_ls.setup({})
+			for _, server in pairs(servers) do
+				Opts = {
+					on_attach = on_attach,
+					capabilities = capabilities,
+				}
+
+				server = vim.split(server, "@")[1]
+				lspconfig[server].setup(Opts)
+			end
+
+			lspconfig.lua_ls.setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							library = {
+								[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+								[vim.fn.stdpath("config") .. "/lua"] = true,
+							},
+						},
+						telemetry = {
+							enable = false,
+						},
+					},
+				},
+			})
+
 			-- lspconfig.tsserver.setup({})
 			typescript.setup({
 				server = {

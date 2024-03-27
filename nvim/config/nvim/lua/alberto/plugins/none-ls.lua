@@ -8,6 +8,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"nvimtools/none-ls.nvim",
+			"nvimtools/none-ls-extras.nvim",
 		},
 		config = function()
 			local null_ls = require("null-ls")
@@ -21,12 +22,25 @@ return {
 				sources = {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.prettier,
-					null_ls.builtins.formatting.jq,
-					null_ls.builtins.diagnostics.eslint_d,
+					require("none-ls.formatting.jq"),
+					require("none-ls.code_actions.eslint"),
+					require("none-ls.diagnostics.eslint_d").with({
+						condition = function(utils)
+							return utils.root_has_file({
+								"eslint.config.js",
+								".eslintrc",
+								".eslintrc.js",
+								".eslintrc.cjs",
+								".eslintrc.yaml",
+								".eslintrc.yml",
+								".eslintrc.json",
+							})
+						end,
+					}),
 				},
 			})
 
-			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+			vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format, {})
 		end,
 	},
 }
