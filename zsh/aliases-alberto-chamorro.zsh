@@ -4,6 +4,7 @@ alias w="cd $HOME/workspace"
 ## COMMANDS
 alias c="clear"
 alias g="lazygit"
+alias o="open ."
 
 # NPM
 alias n="npm"
@@ -21,6 +22,8 @@ alias pa="pnpm add"
 alias pst="pnpm start"
 alias pd="pnpm dev"
 alias pb="pnpm build"
+alias pr="pnpm run"
+alias px="pnpx"
 
 # IDE
 alias i="idea"
