@@ -23,7 +23,7 @@ return {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.prettier,
 					require("none-ls.formatting.jq"),
-					require("none-ls.code_actions.eslint"),
+					-- require("none-ls.code_actions.eslint"),
 					require("none-ls.diagnostics.eslint_d").with({
 						condition = function(utils)
 							return utils.root_has_file({

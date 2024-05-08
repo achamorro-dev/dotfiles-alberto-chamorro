@@ -59,7 +59,7 @@ return {
 		local opts = { noremap = true, silent = true }
 
 		keymap("n", "<Leader>f", "<cmd>Telescope find_files<CR>", opts)
-		keymap("n", "<Leader>g", "<cmd>Telescope live_grep<CR>", opts)
+		keymap("n", "<Leader>b", "<cmd>Telescope live_grep<CR>", opts)
 		keymap("n", "<Leader>e", "<cmd>Telescope buffers<CR>", opts)
 		keymap("n", "<Leader>d", "<cmd>Telescope oldfiles<CR>", opts)
 		keymap("n", "<Leader>s", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)

@@ -50,8 +50,8 @@ keymap("i", "jh", "<ESC>", opts)
 -- Save and quit faster
 keymap("n", "<Leader>w", ":w<CR>", opts)
 keymap("n", "<Leader>q", ":q<CR>", opts)
-keymap("n", "<Leader>c", ":bd<CR>", opts) -- Remove current buffer
-keymap("n", "<Leader>bd", ":bd!<CR>", opts) -- Force remove current buffer
+keymap("n", "<Leader>bd", ":bd<CR>", opts) -- Remove current buffer
+-- keymap("n", "<Leader>bd", ":bd!<CR>", opts) -- Force remove current buffer
 
 --   Indent in visual mode
 keymap("v", "<", "<gv", opts)
