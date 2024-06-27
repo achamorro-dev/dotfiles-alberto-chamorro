@@ -7,6 +7,7 @@ return {
 		"vim-test/vim-test",
 		"nvim-neotest/neotest-jest",
 		"nvim-neotest/neotest-plenary",
+		"nvim-neotest/nvim-nio",
 	},
 	config = function()
 		require("neotest").setup({
