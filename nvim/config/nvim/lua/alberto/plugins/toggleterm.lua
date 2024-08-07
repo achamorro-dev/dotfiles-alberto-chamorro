@@ -16,7 +16,7 @@ return {
 		})
 
 		local Terminal = require("toggleterm.terminal").Terminal
-		local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, close_on_exit = true, direction = "tab" })
+		local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, close_on_exit = true, direction = "float" })
 		local lazydocker =
 			Terminal:new({ cmd = "lazydocker", hidden = true, close_on_exit = true, direction = "float" })
 
