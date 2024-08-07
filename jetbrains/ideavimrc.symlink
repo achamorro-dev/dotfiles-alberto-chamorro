@@ -1,0 +1,82 @@
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+set idearefactormode=keep
+set surround
+
+set hlsearch
+set incsearch
+set smartcase
+set ignorecase
+set showmode
+set highlightedyank
+set clipboard+=unnamed
+
+nmap <S-Space> :action GotoNextError<CR>
+
+
+" clear search highlight
+nnoremap <Esc> <Esc>:noh<CR>
+
+" save file
+nnoremap <leader>w :action SaveAll<CR>
+
+" file movements
+nnoremap <leader>f :action GotoFile<CR>
+nnoremap <leader>e :action RecentFiles<CR>
+nnoremap <leader>bd :action CloseEditor<CR>
+
+" code movements
+nnoremap gf :action ShowUsages<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap go :action FileStructurePopup<CR>
+
+" windows
+nnoremap <leader>t :action ActivateProjectToolWindow<CR>
+nnoremap <leader>s :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>dd :action ActivateDebugToolWindow<CR>
+
+" window splitting and navigation
+nnoremap <leader>v :action SplitHorizontally<CR>
+nnoremap <leader>h :action SplitVertically<CR>
+nnoremap <leader>q :action CloseAllEditors<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" git
+nnoremap <leader>gg :action Vcs.QuickListPopupAction<CR>
+nnoremap <leader>gl :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>gd :action VcsShowNextChangeMarker<CR>
+nnoremap <leader>gr :action Vcs.RollbackChangedLines<CR>
+vnoremap <leader>gr :action Vcs.RollbackChangedLines<CR>
+nnoremap <leader>gp :action Vcs.Push<CR>
+
+" code actions / refactor
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+vnoremap <leader>ca :action ShowIntentionActions<CR>
+nnoremap <leader>cr :action Refactorings.QuickListPopupAction<CR>
+vnoremap <leader>cr :action Refactorings.QuickListPopupAction<CR>
+nnoremap K :action ShowHoverInfo<CR>
+nnoremap grn :action RenameElement<CR>
+vnoremap gcc :action CommentByLineComment<CR>
+
+" debug
+nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+nnoremap <leader>ds :action Debug<CR>
+nnoremap <leader>dq :action Stop<CR>
+nnoremap <leader>de :action QuickEvaluateExpression<CR>
+nnoremap <leader>dc :action Resume<CR>
+nnoremap <leader>do :action StepOver<CR>
+nnoremap <leader>di :action StepInto<CR>
+nnoremap <leader>dt :action StepOut<CR>
+
+" test
+" nnoremap tf :action Run<CR>
+" nnoremap tl :action Rerun<CR>
+
+" easy visual indentation
+xnoremap < <gv
+xnoremap > >gv
