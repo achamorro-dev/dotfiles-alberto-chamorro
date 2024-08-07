@@ -76,3 +76,5 @@ cask 'arc'
 cask 'pika'
 cask 'gas-mask'
 cask 'karabiner-elements'
+cask 'bruno'
+
