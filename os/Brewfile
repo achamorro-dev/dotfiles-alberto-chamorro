@@ -74,7 +74,7 @@ cask 'shottr'
 cask 'dbeaver-community'
 cask 'arc'
 cask 'pika'
-cask 'gas-mask'
+cask 'switchhosts'
 cask 'karabiner-elements'
 cask 'bruno'
 
