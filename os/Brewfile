@@ -24,8 +24,6 @@ brew 'maven'
 # Prompt
 brew 'starship'
 brew 'tree'
-# Window manager
-brew 'koekeishiya/formulae/yabai'
 # To view json files
 brew 'jq'
 brew 'wget'
