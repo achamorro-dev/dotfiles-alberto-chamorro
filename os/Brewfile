@@ -19,7 +19,6 @@ brew 'lf'
 brew 'fd'
 brew 'bitwarden-cli'
 brew 'docker-compose'
-brew 'git-flow-avh'
 brew 'maven'
 
 # Prompt
