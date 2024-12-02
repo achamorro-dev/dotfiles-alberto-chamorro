@@ -1,11 +1,6 @@
 tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/cask'
 tap 'epk/epk'
-tap 'homebrew/cask-drivers'
-tap 'leoafarias/fvm'
 tap 'arl/arl'
-tap 'jesseduffield/lazydocker/lazydocker'
 
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
@@ -22,14 +17,11 @@ brew 'lazydocker'
 brew 'tmux'
 brew 'lf'
 brew 'fd'
-brew 'exa'
 brew 'bitwarden-cli'
 brew 'docker-compose'
 brew 'git-flow-avh'
-brew 'fvm'
-brew 'gitmux'
 brew 'maven'
-brew 'ktlin'
+
 # Prompt
 brew 'starship'
 brew 'tree'
@@ -40,8 +32,6 @@ brew 'jq'
 brew 'wget'
 # Cat clone with syntax highlightin and git integration
 brew 'bat'
-# Supabase CLI
-brew 'supabase/tap/supabase'
 
 cask 'keepingyouawake'
 cask 'appcleaner'
