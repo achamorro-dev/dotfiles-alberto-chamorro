@@ -66,4 +66,4 @@ cask 'pika'
 cask 'switchhosts'
 cask 'karabiner-elements'
 cask 'bruno'
-
+cask 'gather'
