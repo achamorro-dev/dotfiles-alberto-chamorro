@@ -86,6 +86,8 @@ function set_macos_defaults() {
     # Hotkeys
     # Focus to next window
     #defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{enabled = 1; value = { parameters = (186, 10, 1048576); type = 'standard'; }; }"
+    # Disable the CMD+SPACE Shortcut "Show spotlight"
+    defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "{enabled = 0;}"
 
     # Hot corners
     # Possible values:
@@ -178,6 +180,14 @@ function set_macos_defaults() {
 
     # Disable Apple PressAndHold behaviour
     defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+    ###############################################################################
+    # Raycast                                                                     #
+    ###############################################################################
+
+    # Set CMD+Space as the default shortcut
+    defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
+
 }
 
 if test "$(uname)" = "Darwin"; then
