@@ -139,6 +139,13 @@ function set_macos_defaults() {
     defaults write com.apple.screencapture type -string "png"
 
     ###############################################################################
+    # Window Manager and Desktops                                                 #
+    ###############################################################################
+
+    # Disable click wallpaper to reveal desktop
+    defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -int 0
+
+    ###############################################################################
     # Dock                                                                        #
     ###############################################################################
 
