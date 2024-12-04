@@ -195,6 +195,11 @@ function set_macos_defaults() {
     # Set CMD+Space as the default shortcut
     defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
 
+    # Open Raycast in the monitor with the active window
+    defaults write com.raycast.macos raycastWindowPresentationMode -int 1
+
+    # Disable the onboarding
+    defaults write com.raycast.macos onboardingCompleted -int 1
 }
 
 if test "$(uname)" = "Darwin"; then
