@@ -70,4 +70,4 @@ cask 'bruno'
 cask 'gather'
 cask 'linear-linear'
 cask 'cursor'
-
+cask 'loom'
