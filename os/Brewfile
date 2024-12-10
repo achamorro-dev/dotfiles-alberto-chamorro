@@ -30,6 +30,7 @@ brew 'jq'
 brew 'wget'
 # Cat clone with syntax highlightin and git integration
 brew 'bat'
+brew 'tursodatabase/tap/turso'
 
 cask 'keepingyouawake'
 cask 'appcleaner'
