@@ -49,6 +49,9 @@ function set_macos_defaults() {
     # Show hidden files
     defaults write com.apple.finder AppleShowAllFiles -bool true
 
+    # Show path bar
+    defaults write com.apple.finder ShowPathbar -int 1
+
     # Avoid creating .DS_Store files on network or USB volumes
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
     defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
