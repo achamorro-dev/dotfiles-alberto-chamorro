@@ -64,6 +64,9 @@ function set_macos_defaults() {
     # (i.e. use the old Exposé behavior instead)
     defaults write com.apple.dock expose-group-by-app -bool false
 
+    # Use scale to maximize
+    defaults write com.apple.dock mineffect -string scale;
+
     # Show the ~/Library folder
     chflags nohidden ~/Library
 
