@@ -206,6 +206,19 @@ function set_macos_defaults() {
 
     # Disable the onboarding
     defaults write com.raycast.macos onboardingCompleted -int 1
+
+    ###############################################################################
+    # Shottr                                                                      #
+    ###############################################################################
+
+    # Set default folder to ~/screenshots
+    defaults write cc.ffitch.shottr defaultFolder -string "~/Downloads/screenshots"
+
+    # Copy on Escape
+    defaults write cc.ffitch.shottr copyOnEsc -int 1
+
+    # Window shadow to transparent
+    defaults write cc.ffitch.shottr windowShadow -string transparent
 }
 
 if test "$(uname)" = "Darwin"; then
