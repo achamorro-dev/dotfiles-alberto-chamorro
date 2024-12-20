@@ -1,6 +1,7 @@
 tap 'homebrew/bundle'
 tap 'epk/epk'
 tap 'arl/arl'
+tap 'tursodatabase/tap'
 
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
