@@ -16,7 +16,7 @@ local servers = {
 	"rust_analyzer",
 	"lua_ls",
 	"svelte",
-	"tsserver",
+	"ts_ls",
 	"tailwindcss",
 	"vuels",
 	"yamlls",
@@ -96,7 +96,7 @@ return {
 				keymap.set("n", "grn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
 
 				-- typescript specific keymaps (e.g. rename file and update imports)
-				if client.name == "tsserver" then
+				if client.name == "ts_ls" then
 					keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
 					keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>")
 					keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>")
