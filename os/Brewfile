@@ -23,6 +23,7 @@ brew 'docker-compose'
 brew 'maven'
 brew 'ruby'
 brew 'rust'
+brew 'cocoapods'
 
 # Prompt
 brew 'starship'
