@@ -22,6 +22,7 @@ brew 'bitwarden-cli'
 brew 'docker-compose'
 brew 'maven'
 brew 'ruby'
+brew 'rust'
 
 # Prompt
 brew 'starship'
