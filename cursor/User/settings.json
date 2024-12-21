@@ -3,11 +3,10 @@
     "window.commandCenter": false,
     "window.titleBarStyle": "custom",
     "workbench.activityBar.location": "bottom",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.editor.decorations.badges": true,
     "workbench.editor.editorActionsLocation": "hidden",
     "workbench.editor.showTabs": "single",
-    "workbench.iconTheme": "symbols",
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": true,
     "workbench.tree.renderIndentGuides": "none",
@@ -236,5 +235,6 @@
     "editor.accessibilitySupport": "off",
     "update.showReleaseNotes": false,
     "supermaven.enableFixWithSupermaven": true,
-    "markdown-preview-enhanced.breakOnSingleNewLine": false
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "workbench.iconTheme": "material-icon-theme"
 }
