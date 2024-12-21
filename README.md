@@ -1,13 +1,33 @@
 # dotfiles-alberto-chamorro
 
-## Pending
+## Manual steps
 
-### Keyboard shortcuts
+### Replace native Spotlight with Raycast
 
-- Modifier keys -> Caps Lock key like ^Control
-- Display -> Move to next window : Cmd+Alt+Tab
-- Mission Control ->
+- Open Raycast for the first time
+- Keyboard -> Keyboard Shortcuts -> Spotlight -> Show Spotlight search -> Disable
 
-### Accessibility
+### Raycast shortcuts
 
-- Display -> Reduce motion
+- Move windows with Hyper Key + <H/J/K/L> (vim keys)
+- Maximize window with Hyper Key + Enter
+- Open/Focus applications with:
+  - Notion: Hyper Key + N
+  - Notion Calendar: Hyper Key + ´
+  - Cursor: Hyper Key + E
+  - Spotify: Hyper Key + P
+  - Arc: Hyper Key + A
+  - Chrome: Hyper Key + B
+  - Slack: Hyper Key + M
+  - Terminal: Hyper Key + T
+  - Finder: Hyper Key + F
+  - Linear: Hyper Key + Ñ
+  - Simulator: Hyper Key + I
+  - Gather: Hyper Key + G
+
+### Raycast extensions
+
+- Bitwarden
+- Code Smells Search
+- Image Modification
+- Color Picker
