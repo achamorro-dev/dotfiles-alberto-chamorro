@@ -90,7 +90,7 @@ function set_macos_defaults() {
     defaults write com.apple.screensaver askForPasswordDelay -int 0
 
     # Disable the sound effects on boot
-    sudo nvram SystemAudioVolume=" "
+    sudo nvram StartupMute=%01
 
     # Hotkeys
     # Focus to next window
