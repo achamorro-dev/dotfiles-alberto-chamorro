@@ -163,6 +163,11 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && viewContainer.workbench.view.explorer.enabled"
   },
   {
+    "key": "shift+escape",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "vim.mode == 'Normal' && (filesExplorerFocus && !inputFocus)"
+  },
+  {
     "key": "space q",
     "command": "workbench.action.closeEditorsInGroup",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
@@ -451,4 +456,13 @@
     "command": "-editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
   },
+  {
+    "key": "shift+escape",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  }
 ]
