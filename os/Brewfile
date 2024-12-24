@@ -5,6 +5,8 @@ tap 'tursodatabase/tap'
 
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
+brew 'zsh-autocomplete'
+brew 'zsh-autosuggestions'
 brew 'zoxide'
 brew 'nvm' # Node version manager
 brew 'volta'
