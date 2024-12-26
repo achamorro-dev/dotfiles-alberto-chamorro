@@ -464,5 +464,10 @@
   {
     "key": "cmd+b",
     "command": "-workbench.action.toggleSidebarVisibility"
-  }
+  },
+  {
+    "key": "escape",
+    "command": "editor.closeTestPeek",
+    "when": "(vim.mode == 'Normal' && (editorTextFocus || !inputFocus)) && ((testing.isInPeek && !config.editor.stablePeek) || (testing.isPeekVisible && !config.editor.stablePeek))"
+  },
 ]
