@@ -40,6 +40,12 @@ function set_macos_defaults() {
     # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
     defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
+    # Open this folder on new Finder windows
+    defaults write com.apple.finder NewWindowTarget -string "PfLo"
+
+    # Hide recent tags
+    defaults write com.apple.finder ShowRecentTags -bool false
+
     # Keep folders on top when sorting by name
     defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
