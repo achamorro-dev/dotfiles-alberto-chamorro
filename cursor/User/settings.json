@@ -3,7 +3,7 @@
     "window.commandCenter": false,
     "window.titleBarStyle": "custom",
     "workbench.activityBar.location": "bottom",
-    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.colorTheme": "Ayu Mirage Bordered",
     "workbench.editor.decorations.badges": true,
     "workbench.editor.editorActionsLocation": "hidden",
     "workbench.editor.showTabs": "single",
@@ -232,9 +232,10 @@
     },
     "security.workspace.trust.untrustedFiles": "open",
     "gitlens.mode.active": "zen",
-    "editor.accessibilitySupport": "off",
+    "editor.accessibilitySupport": "on",
     "update.showReleaseNotes": false,
     "supermaven.enableFixWithSupermaven": true,
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
     "workbench.iconTheme": "material-icon-theme"
+    "accessibility.signalOptions.volume": 0
 }
