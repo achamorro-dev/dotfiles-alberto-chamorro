@@ -236,6 +236,6 @@
     "update.showReleaseNotes": false,
     "supermaven.enableFixWithSupermaven": true,
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
-    "workbench.iconTheme": "material-icon-theme"
-    "accessibility.signalOptions.volume": 0
+    "workbench.iconTheme": "material-icon-theme",
+    "accessibility.signalOptions.volume": 0,
 }
