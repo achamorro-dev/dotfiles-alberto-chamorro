@@ -46,7 +46,13 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"jose-elias-alvarez/typescript.nvim",
+			{
+				"pmizio/typescript-tools.nvim",
+				dependencies = {
+					"nvim-lua/plenary.nvim",
+					"neovim/nvim-lspconfig",
+				},
+			},
 			{
 				"williamboman/mason-lspconfig.nvim",
 				event = { "BufReadPre", "BufNewFile" },
@@ -72,7 +78,7 @@ return {
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
-			local typescript = require("typescript")
+			local typescript = require("typescript-tools")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local on_attach = function(client, bufnr)
