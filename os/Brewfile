@@ -2,6 +2,7 @@ tap 'homebrew/bundle'
 tap 'epk/epk'
 tap 'arl/arl'
 tap 'tursodatabase/tap'
+tap 'leoafarias/fvm'
 
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
@@ -35,6 +36,7 @@ brew 'wget'
 # Cat clone with syntax highlightin and git integration
 brew 'bat'
 brew 'tursodatabase/tap/turso'
+brew 'fvm'
 
 cask 'keepingyouawake'
 cask 'appcleaner'
