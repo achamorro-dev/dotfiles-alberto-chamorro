@@ -3,7 +3,7 @@
     "window.commandCenter": false,
     "window.titleBarStyle": "custom",
     "workbench.activityBar.location": "bottom",
-    "workbench.colorTheme": "Ayu Mirage Bordered",
+    "workbench.colorTheme": "Xcode Default (Dark)",
     "workbench.editor.decorations.badges": true,
     "workbench.editor.editorActionsLocation": "hidden",
     "workbench.editor.showTabs": "single",
@@ -238,4 +238,7 @@
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
     "workbench.iconTheme": "material-icon-theme",
     "accessibility.signalOptions.volume": 0,
+    "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "lldb.launch.expressions": "native",
+    "playwright.runGlobalSetupOnEachRun": false,
 }
