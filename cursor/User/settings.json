@@ -6,7 +6,7 @@
     "workbench.colorTheme": "Xcode Default (Dark)",
     "workbench.editor.decorations.badges": true,
     "workbench.editor.editorActionsLocation": "hidden",
-    "workbench.editor.showTabs": "single",
+    "workbench.editor.showTabs": "none",
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": true,
     "workbench.tree.renderIndentGuides": "none",
