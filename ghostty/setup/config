@@ -1,0 +1,6 @@
+# Theme
+theme = xcodedarkhc
+font-family = "SFMono Nerd Font"
+term = "xterm-256color"
+adjust-cursor-thickness = 2
+background = "#000000"
