@@ -103,6 +103,8 @@ function set_macos_defaults() {
     #defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{enabled = 1; value = { parameters = (186, 10, 1048576); type = 'standard'; }; }"
     # Disable the CMD+SPACE Shortcut "Show spotlight"
     defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "{enabled = 0;}"
+    # Enable move windows with cmd+ctrl+click
+    defaults write -g NSWindowShouldDragOnGesture -bool true
 
     # Hot corners
     # Possible values:
