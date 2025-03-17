@@ -4,6 +4,7 @@ theme = xcodedarkhc
 font-family="SFMono Nerd Font"
 font-feature=-liga
 font-thicken=true
+font-size=14
 term="xterm-256color"
 adjust-cursor-thickness=2
 
