@@ -1,12 +1,19 @@
 return {
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			vim.cmd("colorscheme catppuccin-mocha")
-		end,
-	},
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme catppuccin-mocha")
+	-- 	end,
+	-- },
+  {
+    "arzg/vim-colors-xcode",
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme xcode")
+    end,
+  },
 	{
 		"projekt0n/github-nvim-theme",
 		-- lazy = false, -- make sure we load this during startup if it is your main colorscheme
