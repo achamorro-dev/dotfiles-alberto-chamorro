@@ -184,6 +184,10 @@ automatically-unhide-macos-hidden-apps = false
   if.app-id = 'com.mitchellh.ghostty'
   run = ['layout floating']
 
+[[on-window-detected]]
+  if.app-id = 'com.spotify.client'
+  run = ['layout floating']
+
 #### APPS-WORKSPACES SETTINGS ####
 [[on-window-detected]]
   if.app-id = 'com.todesktop.230313mzl4w4u92'
