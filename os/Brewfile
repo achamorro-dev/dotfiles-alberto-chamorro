@@ -26,14 +26,11 @@ brew 'ruby'
 brew 'rust'
 brew 'cocoapods'
 
-# Prompt
-brew 'starship'
+brew 'starship' # Prompt
 brew 'tree'
-# To view json files
-brew 'jq'
+brew 'jq' # To view json files
 brew 'wget'
-# Cat clone with syntax highlightin and git integration
-brew 'bat'
+brew 'bat' # Cat clone with syntax highlightin and git integration
 brew 'tursodatabase/tap/turso'
 brew 'fvm'
 
@@ -79,3 +76,4 @@ cask 'cursor'
 cask 'loom'
 cask 'chatgpt'
 cask 'lm-studio'
+cask 'nikitabobko/tap/aerospace' # Window/desktop manager
