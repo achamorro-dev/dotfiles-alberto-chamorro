@@ -101,20 +101,22 @@ automatically-unhide-macos-hidden-apps = false
     alt-period = 'layout accordion horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    alt-h = 'focus left'
-    alt-j = 'focus down'
-    alt-k = 'focus up'
-    alt-l = 'focus right'
+    # alt-h = 'focus left'
+    # alt-j = 'focus down'
+    # alt-k = 'focus up'
+    # alt-l = 'focus right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
-    alt-shift-h = 'move left'
-    alt-shift-j = 'move down'
-    alt-shift-k = 'move up'
-    alt-shift-l = 'move right'
+    alt-shift-ctrl-cmd-h = 'move left'
+    alt-shift-ctrl-cmd-j = 'move down'
+    alt-shift-ctrl-cmd-k = 'move up'
+    alt-shift-ctrl-cmd-l = 'move right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-    alt-shift-slash = 'resize smart -50'
-    alt-shift-period = 'resize smart +50'
+    alt-shift-ctrl-cmd-equal = 'resize smart -50'
+    alt-shift-ctrl-cmd-rightSquareBracket = 'resize smart +50'
+    alt-ctrl-shift-cmd-enter = 'fullscreen'
+    alt-ctrl-shift-cmd-0 = 'balance-sizes'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     # alt-1 = 'workspace 1'
