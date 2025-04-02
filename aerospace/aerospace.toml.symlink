@@ -9,7 +9,9 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = ['exec-and-forget sketchybar']
+
+exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE' ]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -61,8 +63,9 @@ automatically-unhide-macos-hidden-apps = false
     inner.vertical =   10
     outer.left =       10
     outer.bottom =     10
-    outer.top =        10
+    outer.top =        35
     outer.right =      10
+
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -192,7 +195,7 @@ automatically-unhide-macos-hidden-apps = false
 
 #### APPS-WORKSPACES SETTINGS ####
 [[on-window-detected]]
-  if.app-id = 'com.todesktop.230313mzl4w4u92'
+  if.app-id = 'com.todesktop.230313mzl4w4u92' # Cursor
   run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
