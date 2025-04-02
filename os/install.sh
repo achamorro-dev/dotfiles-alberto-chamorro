@@ -35,6 +35,9 @@ function set_macos_defaults() {
     defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
     defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
     defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+    # Hide the mac menu bar
+    defaults write -globalDomain _HIHideMenuBar -int 1
+    defaults write -globalDomain AppleMenuBarVisibleInFullscreen -int 0
 
     # Use list view in all Finder windows by default
     # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
