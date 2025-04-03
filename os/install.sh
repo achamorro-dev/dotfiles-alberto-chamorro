@@ -133,9 +133,6 @@ function set_macos_defaults() {
     defaults write com.apple.dock wvous-bl-corner -int 13
     defaults write com.apple.dock wvous-bl-modifier -int 1048576
 
-    # Show Apple top bar
-    defaults write NSGlobalDomain _HIHideMenuBar -bool false
-
     # Enable subpixel font rendering on non-Apple LCDs
     defaults write NSGlobalDomain AppleFontSmoothing -int 2
 

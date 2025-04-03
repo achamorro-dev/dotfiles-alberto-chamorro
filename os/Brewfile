@@ -2,7 +2,6 @@ tap 'epk/epk'
 tap 'arl/arl'
 tap 'tursodatabase/tap'
 tap 'leoafarias/fvm'
-tap 'FelixKratz/formulae'
 
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
@@ -33,8 +32,6 @@ brew 'wget'
 brew 'bat' # Cat clone with syntax highlightin and git integration
 brew 'tursodatabase/tap/turso'
 brew 'fvm'
-brew 'sketchybar'
-brew 'font-sf-pro'
 
 cask 'keepingyouawake'
 cask 'appcleaner'
