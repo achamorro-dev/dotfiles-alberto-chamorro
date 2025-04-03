@@ -7,23 +7,33 @@
 - Open Raycast for the first time
 - Keyboard -> Keyboard Shortcuts -> Spotlight -> Show Spotlight search -> Disable
 
+### Focus on the next window
+
+- Keyboard -> Keyboard Shortcuts -> Keyboard -> Focus Next Window -> Hyper Key + N --> [N]ext Window
+
 ### Raycast shortcuts
 
-- Move windows with Hyper Key + <H/J/K/L> (vim keys)
-- Maximize window with Hyper Key + Enter
+- Search Emoji & Symbols: Ctrl+Cmd+Space
+- Move windows: Hyper Key + <H/J/K/L> (vim keys)
+- Maximize window: Hyper Key + Enter
 - Open/Focus applications with:
-  - Notion: Hyper Key + N
-  - Notion Calendar: Hyper Key + ´
-  - Cursor: Hyper Key + E
-  - Spotify: Hyper Key + P
-  - Arc: Hyper Key + A
-  - Chrome: Hyper Key + B
-  - Slack: Hyper Key + M
-  - Terminal: Hyper Key + T
-  - Finder: Hyper Key + F
+  - Calendar: Hyper Key + ´
+  - Reminders: Hyper Key + \`
+  - Cursor: Hyper Key + E --> [E]ditor
+  - Spotify: Hyper Key + P --> S[P]otify
+  - Arc: Hyper Key + W --> [W]eb
+  - Chrome: Hyper Key + B --> [B]rowser
+  - Slack: Hyper Key + M --> [M]essaging
+  - Terminal: Hyper Key + T --> [T]erminal
+  - Finder: Hyper Key + F --> [F]inder
   - Linear: Hyper Key + Ñ
-  - Simulator: Hyper Key + I
-  - Gather: Hyper Key + G
+  - Simulator: Hyper Key + I --> [I]phone
+  - Android Studio: Hyper Key + A --> [A]ndroid Studio
+  - Xcode: Hyper Key + X --> [X]code
+  - Gather: Hyper Key + G --> [G]ather
+- Aliases:
+  - Search Screenshots: ss
+  - Search Menu Items: smi
 
 ### Raycast extensions
 
