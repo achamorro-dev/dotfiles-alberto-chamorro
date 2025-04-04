@@ -41,3 +41,7 @@
 - Code Smells Search
 - Image Modification
 - Color Picker
+
+### Mission Control aerospace workaround
+
+- Avoid very small windows: Preferences -> Desktop & Dock -> Mission Control -> Enable Group windows by application
