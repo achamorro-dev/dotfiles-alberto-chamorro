@@ -202,7 +202,7 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
   if.app-id = 'company.thebrowser.Browser'
-  run = ['layout floating', 'move-node-to-workspace 1']
+  run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
   if.app-id = 'com.google.Chrome'
@@ -231,6 +231,10 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
   if.app-id = 'com.hnc.Discord'
   run = ['move-node-to-workspace 5']
+
+[[on-window-detected]]
+  if.app-id = 'com.figma.Desktop'
+  run = ['move-node-to-workspace 6']
   
 [[on-window-detected]]
   if.app-id = 'com.gather.Gather'
