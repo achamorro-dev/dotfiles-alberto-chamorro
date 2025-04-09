@@ -235,7 +235,12 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
   if.app-id = 'com.figma.Desktop'
   run = ['move-node-to-workspace 6']
+
+[[on-window-detected]]
+  if.app-id = 'com.apple.mail'
+  run = ['move-node-to-workspace 7']
   
 [[on-window-detected]]
   if.app-id = 'com.gather.Gather'
   run = ['move-node-to-workspace 9']
+
