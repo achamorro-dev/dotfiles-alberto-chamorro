@@ -4,11 +4,6 @@
     "command": "lazygit.openLazygit"
   },
   {
-    "key": "cmd+shift+c",
-    "command": "workbench.action.tasks.runTask",
-    "args": "lazydocker"
-  },
-  {
     "key": "shift+cmd+r",
     "command": "-rerunSearchEditorSearch",
     "when": "inSearchEditor"
@@ -479,5 +474,10 @@
     "key": "escape",
     "command": "editor.closeTestPeek",
     "when": "(vim.mode == 'Normal' && (editorTextFocus || !inputFocus)) && ((testing.isInPeek && !config.editor.stablePeek) || (testing.isPeekVisible && !config.editor.stablePeek))"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
   },
 ]
