@@ -241,4 +241,6 @@
     "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
     "lldb.launch.expressions": "native",
     "playwright.runGlobalSetupOnEachRun": false,
+    "zenMode.fullScreen": false,
+    "zenMode.showTabs": "none",
 }
