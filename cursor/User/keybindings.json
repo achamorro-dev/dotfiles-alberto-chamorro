@@ -185,7 +185,7 @@
   {
     "key": "g r n",
     "command": "editor.action.rename",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space r r",
@@ -240,57 +240,57 @@
   {
     "key": "g d",
     "command": "editor.action.revealDefinition",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "g t",
     "command": "editor.action.goToTypeDefinition",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "g i",
     "command": "editor.action.goToImplementation",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "g f",
     "command": "editor.action.goToReferences",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "g o",
     "command": "workbench.action.gotoSymbol",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "t t",
     "command": "dart.goToTestOrImplementationFile",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "t a",
     "command": "testing.runAll",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "t f",
     "command": "testing.runCurrentFile",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "t n",
     "command": "testing.runAtCursor",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "t l",
     "command": "testing.reRunLastRun",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "t d",
     "command": "testing.debugAtCursor",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space g g",
