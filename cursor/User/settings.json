@@ -18,7 +18,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "solid",
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "'SFMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'MonaspiceKr Nerd Font Mono', 'SFMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.formatOnSave": true,
@@ -59,7 +59,7 @@
     },
     "editor.foldingImportsByDefault": true,
     "terminal.integrated.defaultLocation": "view",
-    "terminal.integrated.fontFamily": "Monaspace Neon, SFMono Nerd Font",
+    "terminal.integrated.fontFamily": "'MonaspiceKr Nerd Font Mono', Monaspace Neon, SFMono Nerd Font",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.tabs.enabled": false,
@@ -114,7 +114,7 @@
             "y": 6
         }
     },
-    "apc.font.family": "SFMono Nerd Font",
+    "apc.font.family": "'MonaspiceKr Nerd Font Mono'",
     "apc.header": {
         "height": 30
     },
