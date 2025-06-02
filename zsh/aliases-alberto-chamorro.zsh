@@ -31,6 +31,7 @@ alias fg="flutter pub get"
 alias fpc="flutter pub cache clean"
 alias fc="flutter clean"
 alias fb="flutter run build_runner build"
+alias fv="flutter --version"
 
 # IDE
 alias i="idea"
