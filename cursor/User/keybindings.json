@@ -158,6 +158,11 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && viewContainer.workbench.view.explorer.enabled"
   },
   {
+    "key": "space p",
+    "command": "workbench.actions.view.problems",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
     "key": "shift+escape",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "vim.mode == 'Normal' && (filesExplorerFocus && !inputFocus)"
