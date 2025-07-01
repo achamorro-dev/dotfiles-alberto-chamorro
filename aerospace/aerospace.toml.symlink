@@ -205,6 +205,10 @@ automatically-unhide-macos-hidden-apps = false
   run = ['layout floating', 'move-node-to-workspace 1']
 
 [[on-window-detected]]
+  if.app-id = 'app.zen-browser.zen'
+  run = ['layout floating', 'move-node-to-workspace 1']
+
+[[on-window-detected]]
   if.app-id = 'com.google.Chrome'
   run = ['layout floating', 'move-node-to-workspace 1']
 
