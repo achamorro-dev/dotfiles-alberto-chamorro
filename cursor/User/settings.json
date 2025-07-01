@@ -58,7 +58,6 @@
             }
         ]
     },
-    "editor.foldingImportsByDefault": true,
     "terminal.integrated.defaultLocation": "view",
     "terminal.integrated.fontFamily": "'MonaspiceKr Nerd Font Mono', Monaspace Neon, SFMono Nerd Font",
     "terminal.integrated.fontSize": 14,
