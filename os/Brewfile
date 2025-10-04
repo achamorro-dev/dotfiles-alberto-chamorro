@@ -79,3 +79,4 @@ cask 'chatgpt'
 cask 'lm-studio'
 cask 'nikitabobko/tap/aerospace' # Window/desktop manager
 cask 'capcut'
+cask 'superlist'
