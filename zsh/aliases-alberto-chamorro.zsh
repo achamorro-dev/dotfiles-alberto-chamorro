@@ -41,6 +41,8 @@ alias v="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias co="code"
+alias cu="cursor"
+alias ca="cursor-agent"
 
 # TMUX
 alias t="tmux"
