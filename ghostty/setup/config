@@ -1,5 +1,6 @@
 # Theme
 background="#000000"
+background-opacity = 0.80
 theme = "github-dark-high-contrast"
 font-family="JetBrainsMono Nerd Font"
 font-feature=-liga
@@ -7,4 +8,24 @@ font-thicken=true
 font-size=14
 term="xterm-256color"
 adjust-cursor-thickness=2
+adjust-cell-height = 35%
+window-padding-balance = true
+macos-titlebar-style=transparent
+window-colorspace = "display-p3"
 
+mouse-hide-while-typing = true
+
+# keybindings
+keybind = cmd+s>r=reload_config
+keybind = cmd+s>x=close_surface
+
+## splits
+keybind = cmd+s>h=new_split:right
+keybind = cmd+s>v=new_split:down
+keybind = cmd+s>j=goto_split:bottom
+keybind = cmd+s>k=goto_split:top
+keybind = cmd+s>h=goto_split:left
+keybind = cmd+s>l=goto_split:right
+
+# other
+copy-on-select = clipboard
