@@ -1,262 +1,241 @@
 {
-    "update.mode": "manual",
-    "window.commandCenter": false,
-    "window.titleBarStyle": "custom",
-    "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Xcode Pitch Dark Theme",
-    "workbench.editor.decorations.badges": true,
-    "workbench.editor.editorActionsLocation": "hidden",
-    "workbench.editor.showTabs": "none",
-    "workbench.statusBar.visible": true,
-    "workbench.tree.renderIndentGuides": "none",
-    "workbench.sideBar.location": "right",
-    "workbench.layoutControl.enabled": false,
-    "explorer.compactFolders": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorBlinking": "solid",
-    "editor.dragAndDrop": false,
-    "editor.fontFamily": "'MonaspiceKr Nerd Font Mono', 'SFMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 14,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file",
-    "editor.guides.indentation": false,
-    "editor.hideCursorInOverviewRuler": false,
-    "editor.lightbulb.enabled": "off",
-    "editor.linkedEditing": true,
-    "editor.matchBrackets": "never",
-    "editor.overviewRulerBorder": false,
-    "editor.renderLineHighlight": "none",
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
-    "editor.scrollbar.verticalScrollbarSize": 0,
-    "editor.suggestSelection": "first",
-    "editor.tabSize": 2,
-    "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "breadcrumbs.enabled": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "files.eol": "\n",
-    "files.autoSave": "onFocusChange",
-    "errorLens.enabledDiagnosticLevels": [
-        "error"
-    ],
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit"
-    },
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "name": "envKeys",
-                "scope": "string.quoted.single.ini,constant.numeric.ini,string.quoted.double.ini",
-                "settings": {
-                    "foreground": "#19354900"
-                }
-            }
-        ]
-    },
-    "terminal.integrated.defaultLocation": "view",
-    "terminal.integrated.fontFamily": "'MonaspiceKr Nerd Font Mono', Monaspace Neon, SFMono Nerd Font",
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.lineHeight": 1.5,
-    "terminal.integrated.tabs.enabled": false,
-    "search.useIgnoreFiles": true,
-    "search.useGlobalIgnoreFiles": true,
-    "search.exclude": {
-        "**/.fvm": true
-    },
-    "git.autofetch": true,
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "git.openRepositoryInParentFolders": "always",
-    "githubPullRequests.pullBranch": "never",
-    "diffEditor.renderSideBySide": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "vim.leader": "space",
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.highlightedyank.enable": true,
-    "vim.highlightedyank.duration": 100,
-    "vim.surround": true,
-    "vim.handleKeys": {
-        "<f1>": "true"
-    },
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        }
-    ],
-    "apc.electron": {
-        "titleBarStyle": "hiddenInset",
-        "vibrancy": "ultra-dark",
-        "frame": true,
-        "transparent": true,
-        "trafficLightPosition": {
-            "x": 6,
-            "y": 6
-        }
-    },
-    "apc.font.family": "'MonaspiceKr Nerd Font Mono'",
-    "apc.header": {
-        "height": 30
-    },
-    "apc.statusBar": {
-        "position": "editor-bottom"
-    },
-    "apc.listRow": {
-        "lists": [
-            "explorer-folders-view",
-            "quick-input-list",
-            "results"
-        ],
-        "height": 25
-    },
-    "apc.stylesheet": {
-        ".monaco-workbench .part.panel.bottom .composite.title": "border-top-width: 0 !important;",
-        ".split-view-container": "--separator-border: transparent;"
-    },
-    "console-ninja.featureSet": "Community",
-    "todo-tree.highlights.useColourScheme": true,
-    "todo-tree.general.tags": [
-        "TODO",
-        "FIXME",
-        "REFACTOR"
-    ],
-    "todo-tree.highlights.customHighlight": {
-        "TODO": {
-            "background": "#89b4fa",
-            "foreground": "#000",
-            "gutterIcon": true,
-            "iconColour": "#89b4fa",
-            "icon": "bookmark"
-        },
-        "FIXME": {
-            "background": "#f38ba8",
-            "foreground": "#000",
-            "gutterIcon": true,
-            "iconColour": "#f38ba8",
-            "icon": "flame"
-        },
-        "REFACTOR": {
-            "background": "#a6e3a1",
-            "foreground": "#000",
-            "gutterIcon": true,
-            "iconColour": "#a6e3a1",
-            "icon": "beaker"
-        }
-    },
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "javascript.inlayHints.parameterNames.enabled": "all",
-    "javascript.inlayHints.variableTypes.enabled": true,
-    "javascript.inlayHints.enumMemberValues.enabled": true,
-    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
-    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "typescript.inlayHints.variableTypes.enabled": true,
-    "typescript.inlayHints.parameterNames.enabled": "all",
-    "typescript.inlayHints.enumMemberValues.enabled": true,
-    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "prettier.requireConfig": true,
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[astro]": {
-        "editor.defaultFormatter": "astro-build.astro-vscode"
-    },
-    "[mdx]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[dart]": {
-        "editor.formatOnSave": true,
-        "editor.formatOnSaveMode": "file",
-        "editor.selectionHighlight": false,
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "editor.suggestSelection": "first",
-        "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": "off",
-        "editor.codeActionsOnSave": {
-            "source.fixAll": "always",
-            "source.organizeImports": "always"
-        }
-    },
-    "dart.debugSdkLibraries": false,
-    "dart.flutterSdkPaths": [
-        ".fvm/flutter_sdk",
-        "/Users/alberto/fvm/versions",
-        "/Users/$USER/fvm/default"
-    ],
-    "dart.debugExternalPackageLibraries": false,
-    "dart.showInspectorNotificationsForWidgetErrors": false,
-    "terminal.integrated.env.osx": {
-        "FIG_NEW_SESSION": "1"
-    },
-    "security.workspace.trust.untrustedFiles": "open",
-    "gitlens.mode.active": "zen",
-    "editor.accessibilitySupport": "on",
-    "update.showReleaseNotes": false,
-    "supermaven.enableFixWithSupermaven": true,
-    "markdown-preview-enhanced.breakOnSingleNewLine": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "accessibility.signalOptions.volume": 0,
-    "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-    "lldb.launch.expressions": "native",
-    "playwright.runGlobalSetupOnEachRun": false,
-    "zenMode.fullScreen": false,
-    "zenMode.showTabs": "none",
-    "explorer.fileNesting.patterns": {
-        "*.ts": "${capture}.js",
-        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-        "*.jsx": "${capture}.js",
-        "*.tsx": "${capture}.ts",
-        "tsconfig.json": "tsconfig.*.json",
-        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
-        "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
-        "*.dart": "${capture}.g.dart",
-        "*.sqlite": "${capture}.${extname}-*",
-        "*.db": "${capture}.${extname}-*",
-        "*.sqlite3": "${capture}.${extname}-*",
-        "*.db3": "${capture}.${extname}-*",
-        "*.sdb": "${capture}.${extname}-*",
-        "*.s3db": "${capture}.${extname}-*"
-    },
+	"window.titleBarStyle": "custom",
+	"workbench.colorTheme": "Xcode Pitch Dark Theme",
+	"workbench.editor.decorations.badges": true,
+	"workbench.editor.editorActionsLocation": "hidden",
+	"workbench.editor.showTabs": "none",
+	"workbench.statusBar.visible": true,
+	"workbench.tree.renderIndentGuides": "none",
+	"workbench.activityBar.location": "default",
+	"workbench.sideBar.location": "left",
+	"workbench.layoutControl.enabled": false,
+	"explorer.compactFolders": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.cursorBlinking": "solid",
+	"editor.dragAndDrop": false,
+	"editor.fontFamily": "'JetBrainsMono Nerd Font', 'MonaspiceKr Nerd Font Mono', 'SFMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 14,
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.guides.indentation": false,
+	"editor.hideCursorInOverviewRuler": false,
+	"editor.lightbulb.enabled": "off",
+	"editor.linkedEditing": true,
+	"editor.matchBrackets": "never",
+	"editor.overviewRulerBorder": false,
+	"editor.renderLineHighlight": "none",
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
+	"editor.scrollbar.verticalScrollbarSize": 0,
+	"editor.suggestSelection": "first",
+	"editor.tabSize": 2,
+	"editor.minimap.enabled": false,
+	"editor.multiCursorModifier": "ctrlCmd",
+	"breadcrumbs.enabled": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"files.eol": "\n",
+	"files.autoSave": "onFocusChange",
+	"errorLens.enabledDiagnosticLevels": ["error"],
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit"
+	},
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"name": "envKeys",
+				"scope": "string.quoted.single.ini,constant.numeric.ini,string.quoted.double.ini",
+				"settings": {
+					"foreground": "#19354900"
+				}
+			}
+		]
+	},
+	"terminal.integrated.defaultLocation": "view",
+	"terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font', SFMono Nerd Font",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.lineHeight": 1.5,
+	"terminal.integrated.tabs.enabled": false,
+	"search.useIgnoreFiles": true,
+	"search.useGlobalIgnoreFiles": true,
+	"search.exclude": {
+		"**/.fvm": true
+	},
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+	"git.confirmSync": false,
+	"git.openRepositoryInParentFolders": "always",
+	"githubPullRequests.pullBranch": "never",
+	"diffEditor.renderSideBySide": false,
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"vim.leader": "space",
+	"vim.incsearch": true,
+	"vim.useSystemClipboard": true,
+	"vim.useCtrlKeys": true,
+	"vim.hlsearch": true,
+	"vim.highlightedyank.enable": true,
+	"vim.highlightedyank.duration": 100,
+	"vim.surround": true,
+	"vim.handleKeys": {
+		"<f1>": "true"
+	},
+	"vim.visualModeKeyBindings": [
+		{
+			"before": [">"],
+			"commands": ["editor.action.indentLines"]
+		},
+		{
+			"before": ["<"],
+			"commands": ["editor.action.outdentLines"]
+		}
+	],
+	"apc.electron": {
+		"titleBarStyle": "hiddenInset",
+		"vibrancy": "ultra-dark",
+		"frame": true,
+		"transparent": true,
+		"trafficLightPosition": {
+			"x": 6,
+			"y": 6
+		}
+	},
+	"apc.font.family": "'MonaspiceKr Nerd Font Mono'",
+	"apc.header": {
+		"height": 30
+	},
+	"apc.statusBar": {
+		"position": "editor-bottom"
+	},
+	"apc.listRow": {
+		"lists": ["explorer-folders-view", "quick-input-list", "results"],
+		"height": 25
+	},
+	"apc.stylesheet": {
+		".monaco-workbench .part.panel.bottom .composite.title": "border-top-width: 0 !important;",
+		".split-view-container": "--separator-border: transparent;"
+	},
+	"console-ninja.featureSet": "Community",
+	"todo-tree.highlights.useColourScheme": true,
+	"todo-tree.general.tags": ["TODO", "FIXME", "REFACTOR"],
+	"todo-tree.highlights.customHighlight": {
+		"TODO": {
+			"background": "#89b4fa",
+			"foreground": "#000",
+			"gutterIcon": true,
+			"iconColour": "#89b4fa",
+			"icon": "bookmark"
+		},
+		"FIXME": {
+			"background": "#f38ba8",
+			"foreground": "#000",
+			"gutterIcon": true,
+			"iconColour": "#f38ba8",
+			"icon": "flame"
+		},
+		"REFACTOR": {
+			"background": "#a6e3a1",
+			"foreground": "#000",
+			"gutterIcon": true,
+			"iconColour": "#a6e3a1",
+			"icon": "beaker"
+		}
+	},
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.inlayHints.parameterNames.enabled": "all",
+	"javascript.inlayHints.variableTypes.enabled": true,
+	"javascript.inlayHints.enumMemberValues.enabled": true,
+	"javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+	"javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"typescript.inlayHints.variableTypes.enabled": true,
+	"typescript.inlayHints.parameterNames.enabled": "all",
+	"typescript.inlayHints.enumMemberValues.enabled": true,
+	"typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"prettier.requireConfig": true,
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"window.commandCenter": false,
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	},
+	"[dart]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnSaveMode": "file",
+		"editor.selectionHighlight": false,
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		"editor.suggestSelection": "first",
+		"editor.tabCompletion": "onlySnippets",
+		"editor.wordBasedSuggestions": "off",
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "always",
+			"source.organizeImports": "always"
+		}
+	},
+	"dart.debugSdkLibraries": false,
+	"dart.flutterSdkPaths": [
+		".fvm/flutter_sdk",
+		"/Users/alberto/fvm/versions",
+		"/Users/$USER/fvm/default"
+	],
+	"dart.debugExternalPackageLibraries": false,
+	"dart.showInspectorNotificationsForWidgetErrors": false,
+	"terminal.integrated.env.osx": {
+		"FIG_NEW_SESSION": "1"
+	},
+	"security.workspace.trust.untrustedFiles": "open",
+	"gitlens.mode.active": "zen",
+	"editor.accessibilitySupport": "on",
+	"update.showReleaseNotes": false,
+	"supermaven.enableFixWithSupermaven": true,
+	"markdown-preview-enhanced.breakOnSingleNewLine": false,
+	"workbench.iconTheme": "material-icon-theme",
+	"accessibility.signalOptions.volume": 0,
+	"lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+	"lldb.launch.expressions": "native",
+	"playwright.runGlobalSetupOnEachRun": false,
+	"zenMode.fullScreen": false,
+	"zenMode.showTabs": "none",
+	"explorer.fileNesting.patterns": {
+		"*.ts": "${capture}.js",
+		"*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+		"*.jsx": "${capture}.js",
+		"*.tsx": "${capture}.ts",
+		"tsconfig.json": "tsconfig.*.json",
+		"package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+		"pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
+		"*.dart": "${capture}.g.dart",
+		"*.sqlite": "${capture}.${extname}-*",
+		"*.db": "${capture}.${extname}-*",
+		"*.sqlite3": "${capture}.${extname}-*",
+		"*.db3": "${capture}.${extname}-*",
+		"*.sdb": "${capture}.${extname}-*",
+		"*.s3db": "${capture}.${extname}-*"
+	},
+	"debug.disassemblyView.showSourceCode": false
 }

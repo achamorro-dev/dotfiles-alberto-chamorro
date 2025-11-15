@@ -188,7 +188,7 @@
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "g r n",
+    "key": "space r n",
     "command": "editor.action.rename",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
@@ -258,7 +258,7 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "g f",
+    "key": "g r",
     "command": "editor.action.goToReferences",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
