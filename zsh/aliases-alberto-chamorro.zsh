@@ -43,6 +43,7 @@ alias vi="nvim"
 alias co="code"
 alias cu="cursor"
 alias ca="cursor-agent"
+alias oc="opencode"
 
 # TMUX
 alias t="tmux"
