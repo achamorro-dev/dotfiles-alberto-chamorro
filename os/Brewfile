@@ -32,6 +32,7 @@ brew 'wget'
 brew 'bat' # Cat clone with syntax highlightin and git integration
 brew 'tursodatabase/tap/turso'
 brew 'fvm'
+brew 'opencode'
 
 cask 'keepingyouawake'
 cask 'appcleaner'
@@ -72,4 +73,4 @@ cask 'chatgpt'
 cask 'lm-studio'
 cask 'nikitabobko/tap/aerospace' # Window/desktop manager
 cask 'capcut'
-cask 'todoist-app'
+cask 'superlist'
