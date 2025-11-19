@@ -3,6 +3,8 @@ if test "$(uname)" = "Darwin"; then
   if [ "$personal_account" = "y" ]; then
     # Xcode
     mas install 497799835
+    # WhatsApp
+    mas install 310633997
     # DemoPRO
     mas install 1384206666
   fi
