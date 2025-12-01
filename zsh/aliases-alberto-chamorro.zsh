@@ -54,8 +54,8 @@ alias tk="tmux kill-session -t"
 
 # LS
 alias l="ls -a | fzf"
-alias ll="ls -ltr"
-alias lla="ls -ltra"
+alias ll="lsd -ltr"
+alias lla="lsd -ltra"
 
 # Chrome CORS disabled
 alias ccors="open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir=\"/tmp/chrome_dev_test\" --disable-web-security"

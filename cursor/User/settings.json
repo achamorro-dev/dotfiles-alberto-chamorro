@@ -1,6 +1,5 @@
 {
 	"window.titleBarStyle": "custom",
-	"workbench.colorTheme": "Xcode Pitch Dark Theme",
 	"workbench.editor.decorations.badges": true,
 	"workbench.editor.editorActionsLocation": "hidden",
 	"workbench.editor.showTabs": "none",
@@ -237,5 +236,7 @@
 		"*.sdb": "${capture}.${extname}-*",
 		"*.s3db": "${capture}.${extname}-*"
 	},
-	"debug.disassemblyView.showSourceCode": false
+	"debug.disassemblyView.showSourceCode": false,
+	"workbench.colorTheme": "Xcode Pitch Dark Theme",
+	"extensions.gallery.serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"
 }
