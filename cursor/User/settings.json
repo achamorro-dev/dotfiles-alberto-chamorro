@@ -34,11 +34,12 @@
 	"editor.tabSize": 2,
 	"editor.minimap.enabled": false,
 	"editor.multiCursorModifier": "ctrlCmd",
-	"breadcrumbs.enabled": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"files.eol": "\n",
 	"files.autoSave": "onFocusChange",
-	"errorLens.enabledDiagnosticLevels": ["error"],
+	"errorLens.enabledDiagnosticLevels": [
+		"error"
+	],
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": "explicit"
 	},
@@ -83,12 +84,20 @@
 	},
 	"vim.visualModeKeyBindings": [
 		{
-			"before": [">"],
-			"commands": ["editor.action.indentLines"]
+			"before": [
+				">"
+			],
+			"commands": [
+				"editor.action.indentLines"
+			]
 		},
 		{
-			"before": ["<"],
-			"commands": ["editor.action.outdentLines"]
+			"before": [
+				"<"
+			],
+			"commands": [
+				"editor.action.outdentLines"
+			]
 		}
 	],
 	"apc.electron": {
@@ -109,7 +118,11 @@
 		"position": "editor-bottom"
 	},
 	"apc.listRow": {
-		"lists": ["explorer-folders-view", "quick-input-list", "results"],
+		"lists": [
+			"explorer-folders-view",
+			"quick-input-list",
+			"results"
+		],
 		"height": 25
 	},
 	"apc.stylesheet": {
@@ -118,7 +131,11 @@
 	},
 	"console-ninja.featureSet": "Community",
 	"todo-tree.highlights.useColourScheme": true,
-	"todo-tree.general.tags": ["TODO", "FIXME", "REFACTOR"],
+	"todo-tree.general.tags": [
+		"TODO",
+		"FIXME",
+		"REFACTOR"
+	],
 	"todo-tree.highlights.customHighlight": {
 		"TODO": {
 			"background": "#89b4fa",
@@ -156,7 +173,11 @@
 	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
 	"prettier.requireConfig": true,
 	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.codeActionsOnSave": {
+			"source.organizeImports.biome": "explicit",
+			"source.fixAll.biome": "explicit"
+		}
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -211,7 +232,6 @@
 	"gitlens.mode.active": "zen",
 	"editor.accessibilitySupport": "on",
 	"update.showReleaseNotes": false,
-	"supermaven.enableFixWithSupermaven": true,
 	"markdown-preview-enhanced.breakOnSingleNewLine": false,
 	"workbench.iconTheme": "material-icon-theme",
 	"accessibility.signalOptions.volume": 0,
@@ -238,5 +258,7 @@
 	},
 	"debug.disassemblyView.showSourceCode": false,
 	"workbench.colorTheme": "Xcode Pitch Dark Theme",
-	"extensions.gallery.serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"
+	"extensions.gallery.serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+	"git.blame.editorDecoration.enabled": true,
+	"claudeCode.preferredLocation": "panel"
 }
