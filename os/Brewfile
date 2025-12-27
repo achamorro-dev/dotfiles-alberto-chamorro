@@ -35,6 +35,7 @@ brew 'tursodatabase/tap/turso'
 brew 'fvm'
 brew 'opencode'
 brew 'sox'
+brew 'tw93/tap/mole'
 
 cask 'keepingyouawake'
 cask 'appcleaner'
