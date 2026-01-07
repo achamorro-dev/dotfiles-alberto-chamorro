@@ -1,9 +1,5 @@
 [
   {
-    "key": "cmd+shift+g",
-    "command": "lazygit.openLazygit"
-  },
-  {
     "key": "shift+cmd+r",
     "command": "-rerunSearchEditorSearch",
     "when": "inSearchEditor"
@@ -299,7 +295,12 @@
   },
   {
     "key": "space g g",
-    "command": "lazygit.openLazygit",
+    "command": "lazygit-vscode.toggle",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "cmd+shift+g",
+    "command": "lazygit-vscode.toggle",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
