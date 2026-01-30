@@ -6,7 +6,7 @@ alias c="clear"
 alias g="lazygit"
 alias o="open ."
 
-# NPM
+# NPM / PNPM / BUN
 alias n="npm"
 alias ns="npm run serve"
 alias nst="npm run start"
@@ -24,6 +24,10 @@ alias pd="pnpm dev"
 alias pb="pnpm build"
 alias pr="pnpm run"
 alias px="pnpx"
+alias bi="bun install"
+alias br="bun run"
+alias bd="bun run dev"
+alias bb="bun build"
 
 # Flutter
 alias f="flutter"
