@@ -1,7 +1,5 @@
 # Theme
-background="#000000"
-background-opacity = 0.80
-theme = "github-dark-high-contrast"
+theme = dark:Ayu,light:Ayu Light
 font-family="JetBrainsMono Nerd Font"
 font-feature=-liga
 font-thicken=true
@@ -11,6 +9,7 @@ adjust-cursor-thickness=2
 adjust-cell-height = 35%
 window-padding-balance = true
 macos-titlebar-style=transparent
+macos-option-as-alt = left
 window-colorspace = "display-p3"
 
 mouse-hide-while-typing = true
