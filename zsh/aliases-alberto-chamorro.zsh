@@ -50,11 +50,22 @@ alias ca="cursor-agent"
 alias oc="opencode"
 
 # TMUX
-alias t="tmux"
-alias ta="tmux a -t"
-alias tls="tmux ls"
-alias tn="tmux new -t"
-alias tk="tmux kill-session -t"
+# alias t="tmux"
+# alias ta="tmux a -t"
+# alias tls="tmux ls"
+# alias tn="tmux new -t"
+# alias tk="tmux kill-session -t"
+
+# ZELLIJ
+# alias j="zellij"
+# alias jls="zellij ls"
+# alias ja="zellij attach"
+
+# WORKTRUNK
+alias wts="wt switch"
+alias wtc="wt switch --create"
+alias wtl="wt list"
+alias wtr="wt remove"
 
 # LS
 alias l="ls -a | fzf"
