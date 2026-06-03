@@ -1,7 +1,6 @@
 {
   "permissions": {
     "allow": [
-      "mcp__pencil",
       "mcp__plugin_context7_context7__resolve-library-id",
       "Bash(find:*)",
       "Bash(grep:*)",
@@ -21,13 +20,25 @@
       "Bash(./scripts/cli.sh:*)",
       "Bash(flutter test *)",
       "Bash(fvm flutter *)",
-      "Bash(gh pr *)"
+      "Bash(gh pr *)",
+      "mcp__pencil"
     ]
   },
   "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "warp@claude-code-warp": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-warp": {
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
+      }
+    }
   },
   "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
   "model": "opus"
 }
