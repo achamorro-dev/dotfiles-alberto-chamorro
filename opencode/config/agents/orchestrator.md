@@ -2,7 +2,6 @@
 description: Agente primario que coordina Discovery -> Plan -> Review -> Implement -> Verify, incluyendo PRs encadenadas.
 mode: primary
 model: openai/gpt-5.4-mini
-steps: 8
 color: "#ff7518"
 permission:
   edit: deny

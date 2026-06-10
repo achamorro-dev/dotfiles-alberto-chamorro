@@ -3,6 +3,7 @@ description: Fase Discovery; debate socratico para aclarar requisitos, dudas y e
 mode: subagent
 model: openai/gpt-5.5
 variant: xhigh
+steps: 8
 permission:
   edit: deny
   bash: ask

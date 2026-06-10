@@ -4,9 +4,10 @@ mode: subagent
 permission:
   edit: deny
   bash: ask
+  task: allow
 ---
 
-Eres el subagente Verify. Verifica que la implementacion cumple el plan y no introduce regresiones.
+Eres el subagente Verify. Verifica que la implementacion cumple el plan y no introduce regresiones lanzando subagentes para las comprobaciones.
 
 Comprueba:
 
