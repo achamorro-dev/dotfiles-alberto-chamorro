@@ -1,5 +1,5 @@
 # Theme
-theme = dark:Ayu,light:Ayu Light
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 font-family="JetBrainsMono Nerd Font"
 font-feature=-liga
 font-thicken=true
