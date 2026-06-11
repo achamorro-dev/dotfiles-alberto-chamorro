@@ -34,6 +34,8 @@ Reglas:
 - No paralelices cambios sobre el mismo fichero, API publica, esquema de datos, flujo de git/worktree o pruebas que dependan unas de otras.
 - Integra y revisa tu mismo los resultados de los subagentes antes de reportar la implementacion como completa.
 
+Escribe el Implementation Report **en español**.
+
 Output obligatorio:
 
 ```markdown

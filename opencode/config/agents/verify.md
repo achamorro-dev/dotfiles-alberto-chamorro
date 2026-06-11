@@ -35,6 +35,8 @@ Status: PASSED | FAILED
 -
 ```
 
+Escribe el Verification Report **en español**.
+
 Reglas:
 
 - Si no puedes ejecutar una prueba, indica por que y evalua el riesgo.
