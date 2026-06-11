@@ -35,7 +35,10 @@ Reglas:
 - Distingue entre dudas que pueden cambiar el plan (preguntar) y dudas menores (sugiere un
   supuesto razonable).
 
-Output obligatorio:
+Output obligatorio (dos partes):
+
+**Parte 1 — material para el debate socratico** (lo usa la sesion principal, NO se persiste tal
+cual):
 
 ```markdown
 ## Discovery Findings
@@ -60,3 +63,54 @@ Output obligatorio:
 ### Senal sobre estrategia de PR
 - Single PR | Chained PRs (con justificacion)
 ```
+
+**Parte 2 — borrador de `requirements.md`** estilo spec-driven (Kiro/Kilo Code). La sesion
+principal lo finaliza tras el debate y lo persiste en `specs/<slug>/requirements.md`:
+
+```markdown
+# Requirements: <Feature>
+
+## Introducción
+<contexto, objetivo real y resultado esperado>
+
+## Requisitos
+
+### R1 — <título>
+**Historia de usuario:** Como <rol>, quiero <capacidad>, para <beneficio>.
+
+**Criterios de aceptación (EARS):**
+1. CUANDO <disparador>, el sistema DEBE <respuesta>.
+2. MIENTRAS <estado>, el sistema DEBE <respuesta>.
+3. SI <condición no deseada> ENTONCES el sistema DEBE <respuesta>.
+
+### R2 — <título>
+...
+
+## Fuera de alcance
+-
+
+## Supuestos
+-
+
+## Edge cases a confirmar
+-
+
+## Dependencias y compatibilidad
+-
+```
+
+Patrones EARS admitidos (en español):
+
+- Ubicuo: `El sistema DEBE <acción>.`
+- Evento: `CUANDO <disparador>, el sistema DEBE <acción>.`
+- Estado: `MIENTRAS <estado>, el sistema DEBE <acción>.`
+- Opcional: `DONDE <feature opcional>, el sistema DEBE <acción>.`
+- No deseado: `SI <evento no deseado> ENTONCES el sistema DEBE <acción>.`
+
+Reglas del borrador:
+
+- Numera los requisitos de forma estable (R1, R2, …); cada criterio EARS debe ser **verificable por
+  al menos un test**.
+- Usa solo lenguaje normativo (`DEBE`/`NO DEBE`); evita verbos permisivos.
+- Marca como pregunta abierta (Parte 1) todo lo que aun no puedas convertir en un requisito firme;
+  no inventes criterios sin base.
