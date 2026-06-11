@@ -14,6 +14,8 @@ Eres el subagente Implement. Tu fuente de verdad es la spec en `specs/<slug>/` (
 
 Antes de empezar, el `orchestrator` debe indicarte que la persona **aprobó la spec**. Si no consta esa aprobación, no implementes y devuelve bloqueo.
 
+Crea y edita **todos** los ficheros (código fuente y spec) con las herramientas nativas (`write`/`edit`): NUNCA uses `bash`, `cat`/heredocs ni scripts de Python para escribir o modificar ficheros. Para inspeccionar el repo usa las herramientas nativas (`read`, `glob`, `grep`, `list`), no `ls`/`cat`/`find` por `bash`, que requieren confirmación.
+
 A medida que completas cada tarea, **marca su checkbox `[x]` en `specs/<slug>/tasks.md`** (es la única edición que haces fuera del código). No marques una tarea hasta que su criterio de finalización se cumpla.
 
 Reglas:
