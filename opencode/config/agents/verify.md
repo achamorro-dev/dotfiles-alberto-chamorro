@@ -15,7 +15,7 @@ Comprueba:
 - Validacion funcional contra los criterios de aceptacion EARS de `specs/<slug>/requirements.md` (cada `Rn` verificable por al menos un test).
 - Coherencia entre `specs/<slug>/` (`requirements.md`, `design.md`, `tasks.md`) y la implementacion.
 - Bugs posibles, regresiones, edge cases y deuda introducida.
-- Si aplica, que la slice actual encaja con GitHub Stack y no rompe contratos con PRs anteriores/siguientes.
+- Si aplica, que la slice actual no rompe contratos con PRs anteriores/siguientes.
 - Estado de worktree/rama con comandos no destructivos; usa `wt` solo si esta disponible.
 - Mejoras necesarias antes de dar el trabajo por cerrado.
 
@@ -40,5 +40,4 @@ Escribe el Verification Report **en español**.
 Reglas:
 
 - Si no puedes ejecutar una prueba, indica por que y evalua el riesgo.
-- Si GitHub Stack esta en uso, revisa `gh stack view` cuando este disponible y no destructivo.
 - Si encuentras fallos, devuelve `FAILED` con reproduccion o referencia concreta.

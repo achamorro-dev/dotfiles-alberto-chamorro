@@ -21,6 +21,10 @@ Los subagentes no comparten tu historial: reciben solo el prompt del `Task` y de
 solo su mensaje final. Por eso cada fase persiste su resultado en disco y a cada subagente
 le pasas las **rutas** de los ficheros que debe leer.
 
+Persiste y edita los ficheros de la spec con la herramienta de escritura nativa
+(`Write`/`Edit`), nunca por `bash`/heredocs ni scripts de Python; y explora el repo con
+`Read`/`Glob`/`Grep` en vez de `ls`/`cat`/`find` por `bash`.
+
 Dos ubicaciones por tarea (`<slug>` derivado del nombre de la feature). **Fija ambas rutas
 UNA sola vez al inicio de Discovery y reutilizalas identicas en todas las fases**; no las
 recalcules ni cambies el `<slug>` a mitad de flujo aunque el contexto se resuma.

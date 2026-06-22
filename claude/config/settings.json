@@ -8,6 +8,7 @@
       "mcp__plugin_linear_linear__list_teams",
       "mcp__plugin_linear_linear__list_users",
       "mcp__plugin_linear_linear__list_issue_labels",
+      "mcp__linear-server__get_issue",
       "Bash(git fetch:*)",
       "Bash(git status:*)",
       "Bash(git diff:*)",
@@ -29,6 +30,7 @@
       "mcp__pencil"
     ]
   },
+  "model": "opus",
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
@@ -44,6 +46,5 @@
   },
   "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true,
-  "model": "opus"
+  "skipAutoPermissionPrompt": true
 }

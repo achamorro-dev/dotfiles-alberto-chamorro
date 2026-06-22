@@ -21,7 +21,7 @@ Focos posibles (te indican uno en el prompt):
 - `rendimiento`: complejidad, asignaciones, consultas/IO, posibles cuellos de botella o
   regresiones de rendimiento introducidas por el cambio.
 - `bugs-edge-cases`: bugs, regresiones, edge cases, estados vacios/error y, si aplica, que
-  la slice encaje con GitHub Stack sin romper contratos con PRs anteriores/siguientes.
+  la slice encaje en la cadena de PRs sin romper contratos con PRs anteriores/siguientes.
 
 Reglas:
 

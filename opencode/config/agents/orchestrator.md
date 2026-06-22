@@ -25,8 +25,6 @@ Flujo obligatorio:
 Para features grandes:
 
 - Exige que Plan decida entre `Single PR` y `Chained PRs`.
-- Si el plan usa `Chained PRs`, usa GitHub Stack mediante la skill `github-stack-prs` salvo que la persona apruebe otro mecanismo.
-- Si GitHub Stack no esta instalado, autenticado o habilitado para el repo, bloquea o pide confirmacion para instalar/configurar/fallback manual.
 - Coordina una PR/slice cada vez y conserva el output de cada slice como contexto de la siguiente.
 - No mezcles cambios de varias slices en la misma implementacion.
 

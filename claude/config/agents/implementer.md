@@ -27,11 +27,10 @@ Reglas:
   (`pwd`, `git status --short --branch`).
 - Si `wt` esta disponible y el plan lo requiere, usa la skill `worktrees-wt` y ejecuta solo
   acciones aprobadas.
-- Si el plan usa GitHub Stack, usa la skill `github-stack-prs` e implementa solo la
-  slice/PR actual.
-- No ejecutes `gh stack push`, `gh stack submit`, `gh stack sync`, `gh stack rebase`,
-  `gh stack modify` ni `gh stack unstack`, ni `wt merge`/`wt remove`, sin aprobacion
-  explicita.
+- Si el plan divide el trabajo en varias PRs encadenadas, implementa solo la slice/PR
+  actual.
+- No ejecutes `wt merge`/`wt remove` ni otros comandos destructivos de ramas/PRs sin
+  aprobacion explicita.
 - No modifiques ficheros fuera de la spec, salvo los checkboxes de `tasks.md` o un bloqueo
   justificado.
 - No crees, borres, muevas ni cambies worktrees sin instruccion explicita.
@@ -45,7 +44,6 @@ Output obligatorio (escribelo tambien en `implementation.md`):
 ```markdown
 ## Implementation Report
 - PR/slice implementada:
-- GitHub Stack:
 - Worktree/rama:
 - Cambios aplicados:
 - Ficheros modificados:

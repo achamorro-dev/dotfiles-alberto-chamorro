@@ -26,7 +26,7 @@ Detecta y enumera, para que la sesion principal lo lleve a casos extremos con el
 - Edge cases, errores y estados vacios.
 - Restricciones tecnicas, de producto, seguridad o rendimiento.
 - Compatibilidad, migraciones y comportamiento existente que pueda romperse.
-- Indicios sobre el tamano de la feature y si convendria dividirla en PRs encadenadas.
+- Indicios sobre el tamano de la feature y si convendria dividirla en varias slices/PRs.
 - Workflow git relevante: rama base, worktrees, naming.
 
 Reglas:
@@ -61,7 +61,7 @@ cual):
 -
 
 ### Senal sobre estrategia de PR
-- Single PR | Chained PRs (con justificacion)
+- Single PR | Varias slices/PRs (con justificacion)
 ```
 
 **Parte 2 — borrador de `requirements.md`** estilo spec-driven (Kiro/Kilo Code). La sesion

@@ -24,8 +24,7 @@ Reglas:
 - Usa la spec (`design.md` + `tasks.md`) como fuente de verdad cuando haya dudas entre el contexto conversacional y lo aprobado.
 - Antes de editar, confirma worktree y rama con comandos no destructivos.
 - Si `wt` esta disponible y el plan lo requiere, usa la skill `worktrees-wt` y ejecuta solo acciones aprobadas.
-- Si el plan usa GitHub Stack, usa la skill `github-stack-prs` e implementa solo la slice/PR actual.
-- No ejecutes `gh stack submit`, `gh stack push`, `gh stack sync`, `gh stack rebase`, `gh stack modify` o `gh stack unstack` sin aprobacion explicita.
+- Si el plan divide el trabajo en varias PRs encadenadas, implementa solo la slice/PR actual.
 - No modifiques ficheros fuera de la spec, salvo los checkboxes de `tasks.md` o un bloqueo justificado.
 - No crees, borres, muevas ni cambies worktrees sin instruccion explicita.
 - No introduzcas compatibilidad extra, abstracciones o helpers sin necesidad concreta.
@@ -43,7 +42,6 @@ Output obligatorio:
 ```markdown
 ## Implementation Report
 - PR/slice implementada:
-- GitHub Stack:
 - Worktree/rama:
 - Cambios aplicados:
 - Ficheros modificados:
