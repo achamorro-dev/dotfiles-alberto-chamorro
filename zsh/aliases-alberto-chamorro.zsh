@@ -48,6 +48,7 @@ alias co="code"
 alias cu="cursor"
 alias ca="cursor-agent"
 alias oc="opencode"
+alias h="herdr"
 
 # TMUX
 # alias t="tmux"
@@ -79,4 +80,3 @@ alias ccors="open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ 
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../.."
-alias h="cd $HOME"
