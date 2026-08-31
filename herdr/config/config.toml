@@ -68,11 +68,11 @@ help = "alt+shift+?"
 settings = "alt+s"
 detach = "alt+q"
 reload_config = "alt+shift+r"
-open_notification_target = "alt+o"
+#open_notification_target = "alt+o"
 workspace_picker = "alt+w"
 goto = "alt+g"
 new_workspace = "alt+n"
-new_worktree = "alt+shift+g"
+#new_worktree = "alt+shift+g"
 # open_worktree = ""    # optional, unset by default
 # remove_worktree = ""  # optional, unset by default; opens confirmation
 rename_workspace = "alt+shift+w"
@@ -102,7 +102,7 @@ cycle_pane_previous = ""
 split_vertical = "alt+v"
 split_horizontal = "alt+minus"
 close_pane = "alt+x"
-zoom = "alt+z"       # legacy alias: fullscreen
+zoom = "alt+z"                 # legacy alias: fullscreen
 resize_mode = "alt+r"
 toggle_sidebar = "alt+b"
 
@@ -127,6 +127,28 @@ toggle_sidebar = "alt+b"
 # command = "lazygit"
 # width = "80%"
 # height = "80%"
+
+[[keys.command]]
+key = "alt+shift+c"
+type = "shell"
+command = "code ."
+
+[[keys.command]]
+key = "alt+o"
+type = "pane"
+command = "opencode"
+
+[[keys.command]]
+key = "alt+shift+g"
+type = "popup"
+command = "lazygit"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "alt+shift+o"
+type = "shell"
+command = "open ."
 
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.
