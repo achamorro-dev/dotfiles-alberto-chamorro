@@ -1,8 +1,6 @@
 ---
 description: Subagente de bajo nivel para crear commits con Conventional Commits y subject unico.
 mode: subagent
-model: openai/gpt-5.4-mini-fast
-steps: 8
 permission:
   edit: deny
   task: allow
