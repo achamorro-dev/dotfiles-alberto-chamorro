@@ -13,6 +13,7 @@ macos-option-as-alt = left
 window-colorspace = "display-p3"
 
 mouse-hide-while-typing = true
+confirm-close-surface = false
 
 # keybindings
 keybind = cmd+s>r=reload_config
