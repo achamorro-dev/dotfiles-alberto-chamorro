@@ -34,6 +34,7 @@ Reglas:
 - No uses `git add .` si hay cambios no relacionados.
 - No modifiques archivos.
 - Si hay ambiguedad sobre que confirmar, pide aclaracion antes de commitear.
+- No indiques Co-Author ni incluyas Claude Session
 
 Output final:
 
