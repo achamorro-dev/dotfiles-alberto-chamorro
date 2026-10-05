@@ -1,6 +1,7 @@
 [user]
     name = Alberto Chamorro
     email = a.chamorro.ruiz@gmail.com
+	signingkey = /Users/alberto/.ssh/id_ed25519_sign.pub
 [credential]
     helper = osxkeychain
 [alias]
@@ -13,3 +14,9 @@
     rebase = true
 [push]
     autoSetupRemote = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Users/alberto/.ssh/allowed_signers
+[commit]
+	gpgsign = true
