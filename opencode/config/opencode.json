@@ -1,25 +1,24 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "provider": {},
-  "plugin": [
-    "@warp-dot-dev/opencode-warp@0.1.5"
-  ],
+  "providers": {},
   "model": "openai/gpt-6.1-sol",
-  "autoupdate": true,
+  "update": "auto",
   "mcp": {
-    "linear": {
-      "type": "remote",
-      "url": "https://mcp.linear.app/mcp",
-      "enabled": true
-    },
-    "pencil": {
-      "command": [
-        "/Users/alberto/.pencil/mcp/antigravity/out/mcp-server-darwin-arm64",
-        "--app",
-        "antigravity"
-      ],
-      "enabled": true,
-      "type": "local"
+    "servers": {
+      "linear": {
+        "type": "remote",
+        "url": "https://mcp.linear.app/mcp",
+        "disabled": false
+      },
+      "pencil": {
+        "type": "local",
+        "command": [
+          "/Users/alberto/.pencil/mcp/antigravity/out/mcp-server-darwin-arm64",
+          "--app",
+          "antigravity"
+        ],
+        "disabled": false
+      }
     }
   }
 }
