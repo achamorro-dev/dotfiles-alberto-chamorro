@@ -5,3 +5,10 @@ tmux/config/tmux/plugins
 .DS_Store
 claude/config/skills/synced/
 *.before-dotfiles-theme
+
+# Installed from the pinned xcode-pitch-theme source; not maintained here.
+ghostty/setup/themes/xcode-dark
+ghostty/setup/themes/xcode-light
+ghostty/setup/themes/ayu-light
+opencode/config/themes/pitch-xcode-light.json
+opencode/config/themes/pitch-ayu-light.json

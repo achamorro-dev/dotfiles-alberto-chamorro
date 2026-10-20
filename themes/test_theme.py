@@ -1,11 +1,15 @@
 import json
+import io
+import os
 from pathlib import Path
+import tarfile
 import tempfile
 import tomllib
 import unittest
 from unittest.mock import patch
 
 import theme
+import source
 
 
 class JsoncTests(unittest.TestCase):
@@ -40,6 +44,23 @@ class JsoncTests(unittest.TestCase):
 
 
 class ThemeTests(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        replacement = patch.object(theme, "STATE", root / "state.json")
+        replacement.start()
+        self.addCleanup(replacement.stop)
+        self.install_fragments(root)
+
+    @staticmethod
+    def install_fragments(root):
+        (root / "herdr").mkdir(parents=True, exist_ok=True)
+        for variant in ("xcode", "ayu"):
+            for mode in ("auto", "dark", "light"):
+                (root / "herdr" / f"{variant}-{mode}.toml").write_text(
+                    f'[theme]\nname = "terminal"\nauto_switch = {str(mode == "auto").lower()}\n\n')
+
     def test_herdr_preserves_root_and_unrelated_tables_for_all_modes(self):
         original = theme.ROOT.joinpath("herdr/config/config.toml").read_text()
         before = tomllib.loads(original)
@@ -55,31 +76,6 @@ class ThemeTests(unittest.TestCase):
                 self.assertEqual(theme.replace_herdr_theme(result, state), result)
                 original = result
 
-    def test_theme_generation_and_v2_references(self):
-        theme.build()
-        for path in (theme.GENERATED / "opencode").glob("*.json"):
-            data = json.loads(path.read_text())
-            self.assertNotIn("defs", data)
-            self.assertNotIn("theme", data)
-            for mode in ("dark", "light"):
-                resolved = {**data["base"], **data[mode]}
-
-                def resolve(value, stack=()):
-                    if isinstance(value, dict):
-                        return {k: resolve(v, stack) for k, v in value.items()}
-                    if isinstance(value, list):
-                        return [resolve(v, stack) for v in value]
-                    if not value.startswith("$"):
-                        return value
-                    self.assertNotIn(value, stack)
-                    target = resolved
-                    for part in value[1:].split("."):
-                        target = target[part]
-                    return resolve(target, (*stack, value))
-
-                resolve(resolved)
-                self.assertEqual(set(resolved["syntax"]), {"comment", "keyword", "function", "variable", "string", "number", "type", "operator", "punctuation"})
-
     def test_official_extension_version_must_include_light(self):
         for version in ("", "1.1.0", "1.2.0-beta.1", "invalid"):
             self.assertFalse(theme.pitch_has_light(version), version)
@@ -87,27 +83,16 @@ class ThemeTests(unittest.TestCase):
             self.assertTrue(theme.pitch_has_light(version), version)
 
     def test_editors_select_official_themes(self):
-        self.assertEqual(theme.PALETTES["xcode-dark"]["name"], "Xcode Pitch Dark Theme")
-        self.assertEqual(theme.PALETTES["xcode-light"]["name"], "Xcode Pitch Light")
-        self.assertEqual(theme.PALETTES["ayu-light"]["name"], "Ayu Light")
-
-    def test_light_syntax_contrast(self):
-        def luminance(hex_color):
-            channels = [int(hex_color[i:i+2], 16) / 255 for i in (1, 3, 5)]
-            linear = [v / 12.92 if v <= .04045 else ((v + .055) / 1.055) ** 2.4 for v in channels]
-            return sum(a * b for a, b in zip(linear, (.2126, .7152, .0722)))
-
-        p = theme.PALETTES["xcode-light"]
-        for role in ("foreground", "muted", "comment", "keyword", "function", "variable", "string", "number", "type", "operator", "punctuation"):
-            ratio = (luminance(p["background"]) + .05) / (luminance(p[role]) + .05)
-            self.assertGreaterEqual(ratio, 4.5, role)
+        self.assertEqual(theme.EDITOR_THEMES["xcode-dark"], "Xcode Pitch Dark Theme")
+        self.assertEqual(theme.EDITOR_THEMES["xcode-light"], "Xcode Pitch Light")
+        self.assertEqual(theme.EDITOR_THEMES["ayu-light"], "Ayu Light")
 
     def test_editor_auto_and_manual(self):
         for mode in ("auto", "dark", "light"):
             with patch.object(theme, "system_mode", return_value="light"):
                 settings = theme.editor_settings({"mode": mode, "light": "ayu-light"})
             self.assertEqual(settings["window.autoDetectColorScheme"], mode == "auto")
-            self.assertEqual(settings["workbench.colorTheme"], theme.PALETTES["xcode-dark" if mode == "dark" else "ayu-light"]["name"])
+            self.assertEqual(settings["workbench.colorTheme"], theme.EDITOR_THEMES["xcode-dark" if mode == "dark" else "ayu-light"])
 
     def test_atomic_write_preserves_symlink_and_original_backup(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -121,16 +106,30 @@ class ThemeTests(unittest.TestCase):
             self.assertEqual(target.with_name("source.before-dotfiles-theme").read_text(), "original")
             self.assertFalse(theme.write(link, "second", backup=True))
 
+    def test_only_our_herdr_symlink_is_detached_without_losing_preferences(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            template = root / "herdr/config/config.toml"
+            template.parent.mkdir(parents=True)
+            template.write_text('onboarding = false\n[keys]\nprefix = "ctrl+h"\n')
+            active = root / "active.toml"
+            active.symlink_to(template)
+            with patch.object(theme, "ROOT", root), patch.object(theme, "paths", return_value={"herdr": active}):
+                theme.detach_herdr_template()
+            self.assertFalse(active.is_symlink())
+            self.assertEqual(active.read_text(), template.read_text())
+
     def test_apply_round_trip_keeps_other_preferences(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
+            self.install_fragments(root / "runtime")
             paths = {name: root / name for name in ("ghostty", "opencode", "herdr", "VSCode", "Cursor")}
             paths["ghostty"].write_text('font-size = 14\ntheme = old\n')
             paths["herdr"].write_text('onboarding = false\n[theme]\nname = "nord"\n[keys]\nprefix = "ctrl+h"\n')
             paths["opencode"].write_text('{"theme":{"name":"old"}, "plugins":["./herdr-opencode"]}')
             for name in ("VSCode", "Cursor"):
                 paths[name].write_text('{// Keep\n"editor.fontSize": 14,}')
-            with patch.object(theme, "paths", return_value=paths), patch.object(theme, "STATE", root / "state.json"):
+            with patch.object(theme, "paths", return_value=paths), patch.object(theme, "STATE", root / "runtime/state.json"):
                 for mode in ("dark", "light", "auto"):
                     state = {"mode": mode, "light": "ayu-light"}
                     theme.apply(state, reload=False)
@@ -140,6 +139,64 @@ class ThemeTests(unittest.TestCase):
                     self.assertIn('// Keep', paths["VSCode"].read_text())
                     self.assertIn('font-size = 14', paths["ghostty"].read_text())
                     self.assertEqual(theme.read_state(), state)
+
+
+class SourceTests(unittest.TestCase):
+    def test_source_lock_uses_an_immutable_commit(self):
+        lock = json.loads(source.LOCK.read_text())
+        self.assertEqual(lock["repository"], "achamorro-dev/xcode-pitch-theme")
+        self.assertRegex(lock["revision"], r"^[0-9a-f]{40}$")
+
+    @staticmethod
+    def archive(name, link=False):
+        data = io.BytesIO()
+        with tarfile.open(fileobj=data, mode="w:gz") as archive:
+            member = tarfile.TarInfo(name)
+            if link:
+                member.type = tarfile.SYMTYPE
+                member.linkname = "/outside"
+                archive.addfile(member)
+            else:
+                member.size = 2
+                archive.addfile(member, io.BytesIO(b"{}"))
+        return data.getvalue()
+
+    def test_archive_rejects_traversal_and_links(self):
+        with tempfile.TemporaryDirectory() as temp:
+            for name in ("root/../outside", "/root/absolute", "root/palettes/../../outside"):
+                with self.assertRaises(ValueError):
+                    source.extract_archive(self.archive(name), Path(temp))
+            with self.assertRaises(ValueError):
+                source.extract_archive(self.archive("root/scripts/link", link=True), Path(temp))
+
+    def test_archive_extracts_only_required_source_directories(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            source.extract_archive(self.archive("root/palettes/light.json"), root)
+            self.assertEqual((root / "palettes/light.json").read_text(), "{}")
+            source.extract_archive(self.archive("root/images/ignore.json"), root)
+            self.assertFalse((root / "images").exists())
+
+    def test_cached_revision_is_reused_without_network(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            revision = "a" * 40
+            cached = root / revision
+            for relative in source.REQUIRED:
+                path = cached / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("{}")
+            (cached / "package.json").write_text(json.dumps({"publisher": "albertochamorro", "name": "xcode-pitch-dark-theme"}))
+            lock = root / "lock.json"
+            lock.write_text(json.dumps({"repository": "achamorro-dev/xcode-pitch-theme", "revision": revision}))
+            with patch.object(source, "LOCK", lock), patch.object(source, "CACHE", root), patch.dict(os.environ, {"XCODE_PITCH_SOURCE": ""}), patch("urllib.request.urlopen") as network:
+                self.assertEqual(source.resolve(), cached.resolve())
+                network.assert_not_called()
+
+    def test_incomplete_source_fails_before_import(self):
+        with tempfile.TemporaryDirectory() as temp:
+            with self.assertRaises(ValueError):
+                source.validate(Path(temp))
 
 
 if __name__ == "__main__":

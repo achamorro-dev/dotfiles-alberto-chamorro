@@ -2,7 +2,7 @@
 
 ## Temas
 
-VSCode, Cursor, Ghostty, OpenCode, Herdr y Neovim comparten Xcode Pitch Dark/Light, con Ayu Light como alternativa. Usa `theme auto`, `theme dark` o `theme light`. [Instalación y detalles](themes/README.md).
+VSCode, Cursor, Ghostty, OpenCode, Herdr y Neovim consumen una revisión fijada de [Xcode Pitch Theme](https://github.com/achamorro-dev/xcode-pitch-theme), con Ayu Light como alternativa. Los temas se mantienen allí; estos dotfiles solo los instalan y sincronizan con `theme auto`, `theme dark` o `theme light`. [Instalación y detalles](themes/README.md).
 
 ## Manual steps
 
