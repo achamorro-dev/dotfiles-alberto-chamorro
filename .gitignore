@@ -4,3 +4,4 @@
 tmux/config/tmux/plugins
 .DS_Store
 claude/config/skills/synced/
+*.before-dotfiles-theme

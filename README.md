@@ -1,5 +1,9 @@
 # dotfiles-alberto-chamorro
 
+## Temas
+
+VSCode, Cursor, Ghostty, OpenCode, Herdr y Neovim comparten Xcode Pitch Dark/Light, con Ayu Light como alternativa. Usa `theme auto`, `theme dark` o `theme light`. [Instalación y detalles](themes/README.md).
+
 ## Manual steps
 
 ### Replace native Spotlight with Raycast

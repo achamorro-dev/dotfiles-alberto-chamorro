@@ -1,0 +1,4 @@
+#!/bin/sh
+# Resolve the checkout even when this command is called from another directory.
+ROOT="$HOME/.dotfiles/plugins/dotfiles-alberto-chamorro"
+exec python3 "$ROOT/themes/theme.py" "$@"

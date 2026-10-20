@@ -260,5 +260,8 @@
 	"workbench.colorTheme": "Xcode Pitch Dark Theme",
 	"extensions.gallery.serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
 	"git.blame.editorDecoration.enabled": true,
-	"claudeCode.preferredLocation": "panel"
+	"claudeCode.preferredLocation": "panel",
+	"window.autoDetectColorScheme": true,
+	"workbench.preferredDarkColorTheme": "Xcode Pitch Dark Theme",
+	"workbench.preferredLightColorTheme": "Xcode Pitch Light"
 }

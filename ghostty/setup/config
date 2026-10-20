@@ -1,5 +1,5 @@
 # Theme
-theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+theme = dark:xcode-dark,light:xcode-light
 font-family="JetBrainsMono Nerd Font"
 font-feature=-liga
 font-thicken=true

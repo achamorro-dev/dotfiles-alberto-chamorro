@@ -1,8 +1,8 @@
 {
   "$schema": "https://opencode.ai/v2/cli.json",
   "theme": {
-    "name": "catppuccin",
-    "mode": "dark"
+    "name": "pitch-xcode-light",
+    "mode": "system"
   },
   "diffs": {
     "wrap": "word"

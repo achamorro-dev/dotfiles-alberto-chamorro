@@ -1,0 +1,23 @@
+# Generated from themes/palettes.json
+background = #ffffff
+foreground = #26262b
+cursor-color = #26262b
+cursor-text = #ffffff
+selection-background = #cbdcf5
+selection-foreground = #26262b
+palette = 0=#26262b
+palette = 1=#b42318
+palette = 2=#326b24
+palette = 3=#795900
+palette = 4=#005cc5
+palette = 5=#7840a0
+palette = 6=#006b87
+palette = 7=#d0d0d8
+palette = 8=#65656d
+palette = 9=#b42318
+palette = 10=#326b24
+palette = 11=#795900
+palette = 12=#005cc5
+palette = 13=#7840a0
+palette = 14=#006b87
+palette = 15=#ededf0
