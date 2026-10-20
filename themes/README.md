@@ -15,7 +15,7 @@ Las paletas Xcode y **todas** sus adaptaciones pertenecen a [xcode-pitch-theme](
 ```sh
 python3 ~/.dotfiles/plugins/dotfiles-alberto-chamorro/themes/theme.py install
 
-# Mientras Xcode Pitch Theme 1.2.0 no esté publicado en Marketplace:
+# Alternativa: instalar un VSIX local en lugar de Marketplace:
 python3 ~/.dotfiles/plugins/dotfiles-alberto-chamorro/themes/theme.py install \
   --pitch-vsix ~/workspace/personal/xcode-pitch-dark-theme/xcode-pitch-dark-theme-1.2.0.vsix
 
