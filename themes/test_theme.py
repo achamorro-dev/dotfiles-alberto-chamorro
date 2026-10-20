@@ -82,6 +82,30 @@ class ThemeTests(unittest.TestCase):
         for version in ("1.2.0", "1.2.1", "1.10.0", "2.0.0"):
             self.assertTrue(theme.pitch_has_light(version), version)
 
+    def test_herdr_sidebar_titles_inherit_the_theme_and_worktree_keys_do_not_conflict(self):
+        config = tomllib.loads(theme.ROOT.joinpath("herdr/config/config.toml").read_text())
+        for panel in ("agents", "spaces"):
+            title = config["ui"]["sidebar"][panel]["rows"][0][0]
+            self.assertNotIn("fg", title)
+            self.assertTrue(title["bold"])
+            self.assertFalse(title["dim"])
+        agent_rows = config["ui"]["sidebar"]["agents"]["rows"]
+        self.assertEqual(len(agent_rows), 2)
+        self.assertEqual([token["token"] if isinstance(token, dict) else token for token in agent_rows[1]],
+                         ["state_icon", "agent", "state_text", "workspace"])
+        space_title = config["ui"]["sidebar"]["spaces"]["rows"][0][0]
+        self.assertEqual(space_title["rules"], [{"contains": "/", "bold": False, "dim": True}])
+        keys = config["keys"]
+        bindings = [value for key, value in keys.items() if key != "command"]
+        bindings.extend(command["key"] for command in keys["command"])
+        for action, binding in (("open_worktree", "alt+w"), ("new_worktree", "alt+shift+w")):
+            self.assertEqual(keys[action], binding)
+            self.assertEqual(bindings.count(binding), 1)
+        self.assertEqual(keys["workspace_picker"], "")
+        self.assertEqual(keys["rename_workspace"], "")
+        self.assertTrue(any(command["key"] == "alt+shift+g" and command["command"] == "lazygit"
+                            for command in keys["command"]))
+
     def test_editors_select_official_themes(self):
         self.assertEqual(theme.EDITOR_THEMES["xcode-dark"], "Xcode Pitch Dark Theme")
         self.assertEqual(theme.EDITOR_THEMES["xcode-light"], "Xcode Pitch Light")
