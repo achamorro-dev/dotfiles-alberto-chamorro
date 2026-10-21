@@ -13,14 +13,6 @@ return {
       },
       -- VS Code: space f = go to file
       { "<leader>f", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
-      -- VS Code: space e = recent editors
-      {
-        "<leader>e",
-        function()
-          Snacks.picker.buffers()
-        end,
-        desc = "Buffers",
-      },
       {
         "<leader>fb",
         function()

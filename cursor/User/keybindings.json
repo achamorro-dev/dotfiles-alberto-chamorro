@@ -149,7 +149,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "space t",
+    "key": "space e",
     "command": "workbench.view.explorer",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && viewContainer.workbench.view.explorer.enabled"
   },
@@ -194,7 +194,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "space e",
+    "key": "space ,",
     "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
